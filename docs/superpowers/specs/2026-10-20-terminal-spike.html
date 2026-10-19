@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>~</title>
+<style>
+  :root {
+    --bg: #0d1117; --fg: #c9d1d9; --dim: #6e7681; --green: #7ee787; --blue: #58a6ff;
+    --cyan: #79c0ff; --yellow: #e3b341; --magenta: #d2a8ff; --red: #ff7b72; --sel: #264f78;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  body {
+    font: 14px/1.6 ui-monospace, "SFMono-Regular", "Cascadia Code", Menlo, Consolas, "BIZ UDGothic", "Noto Sans Mono CJK JP", monospace;
+    min-height: 100vh; padding: 20px 24px 64px;
+  }
+  @media (max-width: 600px) { body { font-size: 12.5px; padding: 14px 16px 64px; } }
+  ::selection { background: var(--sel); }
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .line { white-space: pre-wrap; word-break: break-word; min-height: 1.6em; }
+  .ps1 .u { color: var(--green); }
+  .ps1 .p { color: var(--blue); }
+  .dim { color: var(--dim); } .g { color: var(--green); } .b { color: var(--blue); } .y { color: var(--yellow); }
+  .m { color: var(--magenta); } .r { color: var(--red); } .c { color: var(--cyan); }
+  .block { margin: 0 0 12px; }
+  .run { cursor: pointer; color: var(--yellow); }
+  .run:hover { text-decoration: underline; }
+  .rows { display: grid; column-gap: 2ch; row-gap: 0; align-items: baseline; }
+  .rows > * { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .rows > .wrap { white-space: normal; }
+  .neo { display: flex; gap: 3ch; align-items: flex-start; flex-wrap: wrap; }
+  .neo pre { margin: 0; color: var(--green); font: inherit; line-height: 1.25; }
+  .neo .kv b { color: var(--green); font-weight: normal; }
+  .swatch { display: inline-block; width: 2.4ch; height: 1em; vertical-align: -2px; }
+  .tags span { display: inline-block; margin: 0 1ch 2px 0; }
+  #inputline { display: none; }
+  #inputline.on { display: flex; }
+  #inputline .ps1 { white-space: pre; flex: none; }
+  #in {
+    flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; padding: 0; margin: 0;
+    color: var(--fg); font: inherit; caret-color: var(--fg);
+  }
+  .cursor { display: inline-block; width: 1ch; height: 1.2em; background: var(--fg); vertical-align: -3px; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  #skip {
+    position: fixed; right: 16px; bottom: 14px; color: var(--dim); font-size: 12px;
+    transition: opacity .4s; background: var(--bg); padding: 2px 6px;
+  }
+  #skip.gone { opacity: 0; pointer-events: none; }
+</style>
+</head>
+<body>
+<main id="term" aria-live="polite">
+  <div id="out"></div>
+  <div id="inputline" class="line"><span class="ps1"></span><input id="in" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="command"></div>
+</main>
+<div id="skip">press any key to skip</div>
+<script type="application/json" id="data">{"id": "shimomo", "name": "Yuichi Shimo", "description": "バックエンド寄りのフルスタックエンジニア", "occupation": "バックエンドエンジニア", "organization": "", "location": "Japan", "scores": {"e": 3.43, "b": 3.48, "i": 2.65, "e_pct": 80.73999786376953, "details": [{"key": "github", "score": 3.369999885559082, "pct": 77.41000366210938}, {"key": "articles", "score": 3.319999933242798, "pct": 74.08999633789062}, {"key": "events", "score": 0.0, "pct": 0.0}, {"key": "skill tags", "score": 4.03000020980835, "pct": 98.12999725341797}]}, "links": [{"key": "github", "url": "https://github.com/shimomo"}, {"key": "zenn", "url": "https://zenn.dev/shimomo"}, {"key": "speakerdeck", "url": "https://speakerdeck.com/shimomo"}, {"key": "connpass", "url": "https://connpass.com/user/shimomo0502"}, {"key": "lapras", "url": "https://lapras.com/public/shimomo"}, {"key": "site", "url": "https://shimomo.net/", "title": "Yuichi Shimo | 経歴と作ったもの"}], "articles": [{"date": "2026-10-17", "title": "求人サイトの SES・派遣の求人は、どこまで見分けられるのか — Chrome 拡張機能を作って測ってみた", "url": "https://zenn.dev/shimomo/articles/9f66a551c41f1a", "source": "zenn", "likes": 0}, {"date": "2026-09-30", "title": "PHP 8.6 の clamp() は何をして、何をしないのか — RC2 で確かめてみた", "url": "https://zenn.dev/shimomo/articles/8499e432bac303", "source": "zenn", "likes": 0}, {"date": "2026-09-29", "title": "laravel/vet は何を止めて、何を止めないのか — 架空の悪性パッケージで確かめてみた", "url": "https://zenn.dev/shimomo/articles/299809443d5505", "source": "zenn", "likes": 0}], "talks": [{"date": "2019-03-21", "title": "JP_Stripes Connect 2019 - 新卒エンジニアの苦悩", "url": "https://speakerdeck.com/shimomo/jp-stripes-connect-2019-xin-zu-enziniafalseku-nao"}, {"date": "2018-09-12", "title": "JP_Stripes 福岡 Vol.4 - 新入社員がカード決済に取り組んだ話", "url": "https://speakerdeck.com/shimomo/jp-stripes-fu-gang-vol-dot-4-xin-ru-she-yuan-gakadojue-ji-niqu-rizu-ndahua"}, {"date": "2018-09-12", "title": "新入社員がカード決済に取り組んだ話", "url": "https://speakerdeck.com/shimomo/xin-ru-she-yuan-gakadojue-ji-niqu-rizu-ndahua"}], "repos": [{"name": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs", "lang": "PHP", "stars": 9, "desc": "[Deprecated] A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト", "fork": false}, {"name": "boatraceopenapi/results", "url": "https://github.com/boatraceopenapi/results", "lang": "PHP", "stars": 9, "desc": "[Deprecated] A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト", "fork": false}, {"name": "shimomo/narikiri", "url": "https://github.com/shimomo/narikiri", "lang": "Go", "stars": 8, "desc": "Stripe and ngrok synchronization command", "fork": false}, {"name": "boatraceopenapi/api", "url": "https://github.com/boatraceopenapi/api", "lang": "PHP", "stars": 6, "desc": "A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト", "fork": false}, {"name": "boatracevibeproject/scraper", "url": "https://github.com/boatracevibeproject/scraper", "lang": "PHP", "stars": 3, "desc": "BVP Scraper：公式サイトから出走表・直前情報・オッズ・結果を取得する PHP ライブラリ | Scrapes programs, previews, odds and results from boatrace.jp", "fork": false}, {"name": "shimomo/ibeacon-scanner", "url": "https://github.com/shimomo/ibeacon-scanner", "lang": "Go", "stars": 3, "desc": "iBeacon Scanner", "fork": false}, {"name": "boatraceopenapi/previews", "url": "https://github.com/boatraceopenapi/previews", "lang": "PHP", "stars": 2, "desc": "[Deprecated] A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト", "fork": false}, {"name": "autorace/tokyo-sports-scraper", "url": "https://github.com/autorace/tokyo-sports-scraper", "lang": "Python", "stars": 1, "desc": "東京スポーツのオートレース情報をスクレイピングするためのライブラリ", "fork": false}, {"name": "keirin-platform/keirin-platform", "url": "https://github.com/keirin-platform/keirin-platform", "lang": "Python", "stars": 0, "desc": "競輪の出走表・レース結果を収集し、昇級・降級の影響を補正した競走得点を算出・表示する個人用データ基盤（Python / GitHub Actions / Streamlit）", "fork": false}, {"name": "boatracevibeproject/scraper-stadiums", "url": "https://github.com/boatracevibeproject/scraper-stadiums", "lang": "PHP", "stars": 0, "desc": "BVP Scraper Stadiums：各場の公式サイトにしか無い情報（選手コメントなど）を取得する PHP ライブラリ | Scrapes stadium-only data such as racer comments", "fork": false}, {"name": "shimomo/tech-trends", "url": "https://github.com/shimomo/tech-trends", "lang": "TypeScript", "stars": 0, "desc": "Daily Web/AI tech trends from GitHub Trending and Zenn", "fork": false}, {"name": "shimomo/autorace-news-collector", "url": "https://github.com/shimomo/autorace-news-collector", "lang": "PHP", "stars": 0, "desc": "オートレースの最新記事を AUTORACE.JP・日刊スポーツ・レース場公式サイト・YouTube のフィードと API から集める PHP ライブラリ / Collects the latest AutoRace news from official feeds and APIs", "fork": false}, {"name": "shimomo/funaken-lab", "url": "https://github.com/shimomo/funaken-lab", "lang": "TypeScript", "stars": 0, "desc": "ボートレース（競艇）の買い方を実際のレース結果で検証するバックテストの実験室 / A browser-only backtesting lab for boatrace betting strategies", "fork": false}, {"name": "shimomo/keirin-news-collector", "url": "https://github.com/shimomo/keirin-news-collector", "lang": "PHP", "stars": 0, "desc": "競輪の最新記事を KEIRIN.JP・新聞各紙・競輪場公式サイトのフィードと API から集める PHP ライブラリ / Collects the latest Keirin news from official feeds and APIs", "fork": false}, {"name": "shimomo/ses-filter", "url": "https://github.com/shimomo/ses-filter", "lang": "TypeScript", "stars": 0, "desc": "エンジニア求人サイトの検索結果で、SES・派遣の求人を理由つきで畳む Chrome 拡張機能", "fork": false}, {"name": "keirin-platform/.github", "url": "https://github.com/keirin-platform/.github", "lang": "", "stars": 0, "desc": "keirin-platform 組織のプロフィール（profile/README.md）と共通設定", "fork": false}, {"name": "shimomo/lab-laravel-vet", "url": "https://github.com/shimomo/lab-laravel-vet", "lang": "Python", "stars": 0, "desc": "laravel/vet（v0.2.1）の挙動を、手元で配る架空パッケージ vetlab/widget で確かめるための検証環境", "fork": false}, {"name": "shimomo/shimomo", "url": "https://github.com/shimomo/shimomo", "lang": "Python", "stars": 0, "desc": "shimomo's portfolio", "fork": false}, {"name": "shimomo/lab-php86-clamp", "url": "https://github.com/shimomo/lab-php86-clamp", "lang": "PHP", "stars": 0, "desc": "PHP 8.6 で追加される clamp() の挙動を、公式 Docker イメージの 8.6.0RC2 で確かめるための検証環境", "fork": false}, {"name": "turnmark/turnmark.github.io", "url": "https://github.com/turnmark/turnmark.github.io", "lang": "", "stars": 0, "desc": "A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト", "fork": false}], "events": [{"date": "2026-10-20", "title": "【“AIに任せる”の正解とは？】", "url": "https://flexy.connpass.com/event/408212/", "presenter": false, "organizer": false}], "langs": [{"name": "PHP", "bytes": 2197429}, {"name": "TypeScript", "bytes": 442113}, {"name": "Blade", "bytes": 165080}, {"name": "Python", "bytes": 75901}, {"name": "PowerShell", "bytes": 50844}, {"name": "HTML", "bytes": 46294}, {"name": "Shell", "bytes": 42337}, {"name": "Ruby", "bytes": 32667}, {"name": "Sass", "bytes": 19448}, {"name": "JavaScript", "bytes": 12251}, {"name": "CSS", "bytes": 10606}, {"name": "Go", "bytes": 8295}, {"name": "SCSS", "bytes": 5587}, {"name": "dockerfile", "bytes": 4085}, {"name": "Vue.js", "bytes": 552}, {"name": "CoffeeScript", "bytes": 211}], "skills": [{"name": "Scraper", "level": 10}, {"name": "PHP", "level": 10}, {"name": "BOATRACE", "level": 9}, {"name": "ボートレース", "level": 9}, {"name": "ライブラリ", "level": 9}, {"name": "API", "level": 8}, {"name": "project", "level": 8}, {"name": "競艇", "level": 8}, {"name": "GitHub", "level": 8}, {"name": "Actions", "level": 8}, {"name": "プロジェクト", "level": 8}, {"name": "Read", "level": 7}, {"name": "Subtree", "level": 7}, {"name": "split", "level": 7}, {"name": "component", "level": 7}, {"name": "see", "level": 7}, {"name": "publishing", "level": 7}, {"name": "Pages", "level": 7}, {"name": "データ", "level": 7}, {"name": "公式サイト", "level": 7}, {"name": "archived", "level": 7}, {"name": "DEPRECATED", "level": 6}, {"name": "名称", "level": 6}, {"name": "library", "level": 6}, {"name": "trimmer", "level": 6}, {"name": "パッケージ", "level": 6}, {"name": "Tamagawa", "level": 6}, {"name": "Fukuoka", "level": 6}, {"name": "moved", "level": 6}, {"name": "package", "level": 5}, {"name": "Programs", "level": 5}, {"name": "previews", "level": 5}, {"name": "results", "level": 5}, {"name": "proxy", "level": 5}, {"name": "基盤", "level": 5}, {"name": "番号", "level": 5}, {"name": "プロキシ", "level": 5}, {"name": "converter", "level": 5}, {"name": "prefecture", "level": 5}, {"name": "stadium", "level": 5}, {"name": "core", "level": 5}, {"name": "情報", "level": 5}, {"name": "BOA", "level": 5}, {"name": "motivation", "level": 5}, {"name": "Viz", "level": 5}, {"name": "バックエンドエンジニア", "level": 5}, {"name": "tsu", "level": 5}, {"name": "Python", "level": 5}, {"name": "JP", "level": 5}, {"name": "and n", "level": 4}, {"name": "Ninja", "level": 4}, {"name": "徳山", "level": 4}, {"name": "直前", "level": 4}, {"name": "元", "level": 4}, {"name": "選手", "level": 4}, {"name": "体重", "level": 4}, {"name": "モチベーション", "level": 4}, {"name": "可視", "level": 4}, {"name": "Webアプリケーション", "level": 4}, {"name": "オッス", "level": 4}, {"name": "Developing", "level": 4}, {"name": "packages", "level": 4}, {"name": "converts", "level": 4}, {"name": "Japanese", "level": 4}, {"name": "region", "level": 4}, {"name": "numbers", "level": 4}, {"name": "names", "level": 4}, {"name": "recursively", "level": 4}, {"name": "Trims", "level": 4}, {"name": "strings", "level": 4}, {"name": "nested", "level": 4}, {"name": "arrays", "level": 4}, {"name": "platform", "level": 4}, {"name": "競輪", "level": 4}, {"name": "レース", "level": 4}, {"name": "個人", "level": 4}, {"name": "streamlit", "level": 4}, {"name": "scrapes", "level": 4}, {"name": "odds", "level": 4}, {"name": "都道府県", "level": 4}, {"name": "地方", "level": 4}, {"name": "漢字", "level": 4}, {"name": "かな", "level": 4}, {"name": "英語", "level": 4}, {"name": "相互", "level": 4}, {"name": "階層", "level": 4}, {"name": "文字列", "level": 4}, {"name": "天候", "level": 4}, {"name": "コード", "level": 4}, {"name": "converting", "level": 4}, {"name": "Codes", "level": 4}, {"name": "Ames", "level": 4}, {"name": "アーカイブ", "level": 4}, {"name": "舟券", "level": 4}, {"name": "自動", "level": 4}, {"name": "Purchasing", "level": 4}, {"name": "tickets", "level": 4}, {"name": "スクレイピング", "level": 3}, {"name": "津", "level": 3}, {"name": "Tokyo", "level": 3}, {"name": "sports", "level": 3}, {"name": "オートレース", "level": 3}, {"name": "TypeScript", "level": 3}, {"name": "フルスタック", "level": 1}, {"name": "エンジニア", "level": 1}, {"name": "バックエンド", "level": 1}, {"name": "AI", "level": 1}, {"name": "新入社員", "level": 1}, {"name": "カート", "level": 1}, {"name": "stripes", "level": 1}], "activities": [{"title": "【“AIに任せる”の正解とは？】", "url": "https://flexy.connpass.com/event/408212/", "date": "2026-10-20T00:00:00", "type": "connpass"}, {"title": "shimomo/tech-trends", "url": "https://github.com/shimomo/tech-trends", "date": "2026-10-18T21:57:38", "type": "github"}, {"title": "shimomo/shimomo", "url": "https://github.com/shimomo/shimomo", "date": "2026-10-18T13:52:13", "type": "github"}, {"title": "求人サイトの SES・派遣の求人は、どこまで見分けられるのか — Chrome 拡張機能を作って測ってみた", "url": "https://zenn.dev/shimomo/articles/9f66a551c41f1a", "date": "2026-10-17T18:58:11", "type": "zenn"}, {"title": "shimomo/ses-filter", "url": "https://github.com/shimomo/ses-filter", "date": "2026-10-17T17:48:14", "type": "github"}, {"title": "shimomo/keirin-news-collector", "url": "https://github.com/shimomo/keirin-news-collector", "date": "2026-10-13T15:56:31", "type": "github"}, {"title": "shimomo/autorace-news-collector", "url": "https://github.com/shimomo/autorace-news-collector", "date": "2026-10-13T02:46:56", "type": "github"}, {"title": "keirin-platform/keirin-platform", "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo", "date": "2026-10-07T02:59:25", "type": "github_pr"}, {"title": "keirin-platform/keirin-platform", "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo", "date": "2026-10-06T05:36:52", "type": "github_pr"}, {"title": "keirin-platform/keirin-platform", "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo", "date": "2026-10-05T01:00:12", "type": "github_pr"}, {"title": "keirin-platform/keirin-platform", "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo", "date": "2026-10-04T16:47:06", "type": "github_pr"}, {"title": "keirin-platform/.github", "url": "https://github.com/keirin-platform/.github/pulls?q=is:pr+author:shimomo", "date": "2026-10-04T16:46:44", "type": "github_pr"}, {"title": "keirin-platform/keirin-platform", "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo", "date": "2026-10-03T19:19:24", "type": "github_pr"}, {"title": "keirin-platform/keirin-platform", "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo", "date": "2026-10-02T23:21:19", "type": "github_pr"}, {"title": "PHP 8.6 の clamp() は何をして、何をしないのか — RC2 で確かめてみた", "url": "https://zenn.dev/shimomo/articles/8499e432bac303", "date": "2026-09-30T23:48:38", "type": "zenn"}, {"title": "shimomo/lab-php86-clamp", "url": "https://github.com/shimomo/lab-php86-clamp", "date": "2026-09-30T22:32:42", "type": "github"}, {"title": "laravel/vet は何を止めて、何を止めないのか — 架空の悪性パッケージで確かめてみた", "url": "https://zenn.dev/shimomo/articles/299809443d5505", "date": "2026-09-29T23:45:35", "type": "zenn"}, {"title": "shimomo/lab-laravel-vet", "url": "https://github.com/shimomo/lab-laravel-vet", "date": "2026-09-29T23:04:57", "type": "github"}, {"title": "shimomo/funaken-lab", "url": "https://github.com/shimomo/funaken-lab/pulls?q=is:pr+author:shimomo", "date": "2026-09-26T14:07:49", "type": "github_pr"}, {"title": "shimomo/funaken-lab", "url": "https://github.com/shimomo/funaken-lab/pulls?q=is:pr+author:shimomo", "date": "2026-09-25T12:38:28", "type": "github_pr"}, {"title": "shimomo/funaken-lab", "url": "https://github.com/shimomo/funaken-lab", "date": "2026-09-25T03:26:02", "type": "github"}, {"title": "boatraceopenapi/results", "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo", "date": "2025-10-02T21:46:11", "type": "github_pr"}, {"title": "boatraceopenapi/previews", "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo", "date": "2025-10-02T21:39:43", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-10-02T21:36:16", "type": "github_pr"}, {"title": "boatracevibeproject/trimmer", "url": "https://github.com/boatracevibeproject/trimmer/pulls?q=is:pr+author:shimomo", "date": "2025-09-26T00:35:53", "type": "github_pr"}, {"title": "shimomo/bvp-scraper-core", "url": "https://github.com/shimomo/bvp-scraper-core/pulls?q=is:pr+author:shimomo", "date": "2025-09-04T20:41:35", "type": "github_pr"}, {"title": "boatraceopenapi/previews", "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo", "date": "2025-09-03T01:10:10", "type": "github_pr"}, {"title": "boatraceopenapi/previews", "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo", "date": "2025-09-02T20:42:35", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-09-01T01:13:40", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-31T17:48:26", "type": "github_pr"}, {"title": "boatraceopenapi/results", "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo", "date": "2025-08-31T05:32:49", "type": "github_pr"}, {"title": "boatraceopenapi/previews", "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo", "date": "2025-08-31T05:29:25", "type": "github_pr"}, {"title": "boatraceopenapi/results", "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo", "date": "2025-08-30T23:16:03", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-30T15:07:11", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-29T21:43:51", "type": "github_pr"}, {"title": "boatraceopenapi/previews", "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo", "date": "2025-08-29T02:23:36", "type": "github_pr"}, {"title": "boatraceopenapi/previews", "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo", "date": "2025-08-28T17:35:22", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-28T13:26:01", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-27T16:26:29", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-26T21:42:12", "type": "github_pr"}, {"title": "boatraceopenapi/previews", "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo", "date": "2025-08-26T17:09:26", "type": "github_pr"}, {"title": "boatracevibeproject/stadium", "url": "https://github.com/boatracevibeproject/stadium/pulls?q=is:pr+author:shimomo", "date": "2025-08-26T13:35:27", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-24T04:57:58", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-17T01:47:43", "type": "github_pr"}, {"title": "boatraceopenapi/programs", "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo", "date": "2025-08-16T22:23:32", "type": "github_pr"}, {"title": "autorace/tokyo-sports-scraper", "url": "https://github.com/autorace/tokyo-sports-scraper/pulls?q=is:pr+author:shimomo", "date": "2025-08-14T01:59:14", "type": "github_pr"}, {"title": "autorace/tokyo-sports-scraper", "url": "https://github.com/autorace/tokyo-sports-scraper/pulls?q=is:pr+author:shimomo", "date": "2025-08-13T20:49:49", "type": "github_pr"}, {"title": "autorace/tokyo-sports-scraper", "url": "https://github.com/autorace/tokyo-sports-scraper/pulls?q=is:pr+author:shimomo", "date": "2025-08-12T23:22:47", "type": "github_pr"}], "counts": {"public_repos": 26, "followers": 12}, "built_at": "2026-10-19 18:14 UTC"}</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById('data').textContent);
+  const out = document.getElementById('out');
+  const inputLine = document.getElementById('inputline');
+  const input = document.getElementById('in');
+  const skipHint = document.getElementById('skip');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const HOST = 'lapras';
+  document.title = `${D.id}@${HOST}: ~`;
+
+  // ---------- tiny DOM helpers ----------
+  const h = (tag, attrs = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) {
+      if (k === 'class') n.className = v;
+      else if (k.startsWith('on')) n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v);
+    }
+    for (const k of kids.flat()) if (k != null && k !== false) n.append(k instanceof Node ? k : String(k));
+    return n;
+  };
+  const s = (cls, text) => h('span', { class: cls }, text);
+  const a = (text, href) => href ? h('a', { href, target: '_blank', rel: 'noopener' }, text) : text;
+  const run = (cmd, label) => h('span', { class: 'run', onclick: (e) => { e.stopPropagation(); execute(cmd); } }, label || cmd);
+  const print = (...kids) => { out.append(h('div', { class: 'line' }, ...kids)); };
+  const block = (node) => { out.append(h('div', { class: 'block' }, node)); };
+  const rows = (cols, items) => h('div', { class: 'rows', style: `grid-template-columns:${cols}` }, items.flat());
+  const ps1 = () => [s('u', `${D.id}@${HOST}`), ':', s('p', '~'), '$ '];
+  const scrollDown = () => window.scrollTo(0, document.body.scrollHeight);
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  const pct = (p) => (p == null || p <= 0 ? '' : `top ${Math.max(1, Math.round(100 - p))}%`);
+  const bar = (ratio, width = 24) => {
+    const n = Math.round(Math.max(0, Math.min(1, ratio)) * width);
+    return [s('g', '█'.repeat(n)), s('dim', '░'.repeat(width - n))];
+  };
+
+  // ---------- data views ----------
+  const dirs = {
+    articles: D.articles, talks: D.talks, repos: D.repos, events: D.events,
+  };
+  const nonEmptyDirs = Object.keys(dirs).filter((k) => dirs[k].length);
+  const totalStars = D.repos.reduce((t, r) => t + r.stars, 0);
+  const topLangs = [...D.langs].sort((x, y) => y.bytes - x.bytes);
+
+  // Spike: hard-coded figlet-ish initials. The real build would render this from the name.
+  const ART = String.raw`
+ __   __  _____
+ \ \ / / / ____|
+  \ V / | (___
+   | |   \___ \
+   | |   ____) |
+   |_|  |_____/ `.slice(1);
+
+  const cmds = {
+    help: {
+      desc: 'このヘルプを表示',
+      fn() {
+        const list = Object.entries(cmds).filter(([, c]) => !c.hidden);
+        block(h('div', {},
+          h('div', {}, s('dim', 'クリックでも実行できます')),
+          rows('max-content 1fr', list.map(([name, c]) => [run(c.usage || name), s('dim', c.desc)])),
+        ));
+      },
+    },
+    neofetch: {
+      desc: 'プロフィールの概要',
+      fn() {
+        const kv = (k, ...v) => h('div', {}, h('b', {}, k), ': ', ...v);
+        const info = h('div', { class: 'kv' },
+          h('div', {}, s('g', D.id), '@', s('g', HOST)),
+          h('div', { class: 'dim' }, '-'.repeat(D.id.length + HOST.length + 1)),
+          kv('Name', D.name),
+          D.occupation && kv('Role', D.occupation),
+          D.description && kv('Bio', D.description),
+          D.organization && kv('Org', D.organization),
+          D.location && kv('Location', D.location),
+          kv('Score', `tech ${D.scores.e.toFixed(2)} · biz ${D.scores.b.toFixed(2)} · infl ${D.scores.i.toFixed(2)}`, D.scores.e_pct != null ? s('dim', ` (tech ${pct(D.scores.e_pct)})`) : ''),
+          topLangs.length > 0 && kv('Langs', topLangs.slice(0, 4).map((l) => l.name).join(', ')),
+          kv('Repos', `${D.counts.public_repos} public · ★ ${totalStars}`),
+          D.articles.length + D.talks.length + D.events.length > 0 && kv('Output', `${D.articles.length} articles · ${D.talks.length} talks · ${D.events.length} events`),
+          h('div', { style: 'margin-top:6px' },
+            ['#ff7b72', '#e3b341', '#7ee787', '#79c0ff', '#58a6ff', '#d2a8ff', '#c9d1d9'].map((c) => h('span', { class: 'swatch', style: `background:${c}` }))),
+        );
+        block(h('div', { class: 'neo' }, h('pre', {}, ART), info));
+      },
+    },
+    whoami: { desc: '名前と肩書き', fn() { print(D.name, D.description ? s('dim', ` — ${D.description}`) : ''); } },
+    ls: {
+      usage: 'ls', desc: `一覧を表示（${nonEmptyDirs.join(' / ')}）`,
+      fn(args, opt) {
+        const target = (args.find((x) => !x.startsWith('-')) || '').replace(/^~\//, '').replace(/\/$/, '');
+        if (!target) {
+          print(...nonEmptyDirs.flatMap((dname) => [run(`ls ${dname}`, h('span', { class: 'b' }, `${dname}/`)), '  ']));
+          return;
+        }
+        if (!(target in dirs)) { print(`ls: cannot access '${target}': No such file or directory`); return; }
+        const items = dirs[target].slice(0, opt.limit ?? 10);
+        if (!items.length) { print(s('dim', '(empty)')); return; }
+        const views = {
+          articles: () => rows('max-content minmax(0,1fr) max-content', items.map((x) => [s('dim', x.date), a(x.title, x.url), s('dim', x.source)])),
+          talks: () => rows('max-content minmax(0,1fr)', items.map((x) => [s('dim', x.date), a(x.title, x.url)])),
+          repos: () => rows('max-content max-content max-content minmax(0,1fr)', items.map((x) => [s('y', `★${x.stars}`), a(x.name, x.url), s('m', x.lang || '-'), s('dim', x.desc)])),
+          events: () => rows('max-content minmax(0,1fr) max-content', items.map((x) => [s('dim', x.date), a(x.title, x.url), s('g', x.presenter ? 'speaker' : x.organizer ? 'organizer' : '')])),
+        };
+        block(views[target]());
+        if (dirs[target].length > items.length) print(s('dim', `… ${dirs[target].length - items.length} more (ls ${target} | head -${dirs[target].length})`));
+      },
+    },
+    score: {
+      usage: 'lapras score', desc: 'LAPRAS のスコア',
+      fn() {
+        const sc = D.scores;
+        block(rows('max-content max-content max-content max-content', [
+          ['tech', sc.e, sc.e_pct], ['business', sc.b, null], ['influence', sc.i, null],
+        ].map(([k, v, p]) => [k, s('y', v.toFixed(2)), h('span', {}, bar(v / 5)), s('dim', pct(p))])));
+        const det = sc.details.filter((x) => x.score != null);
+        if (det.length) {
+          print(s('dim', 'tech score breakdown'));
+          block(rows('max-content max-content max-content max-content', det.map((x) => [
+            s('dim', `  ${x.key}`), s('y', x.score.toFixed(2)), h('span', {}, bar(x.score / 5, 16)), s('dim', pct(x.pct)),
+          ])));
+        }
+      },
+    },
+    langs: {
+      desc: 'よく書く言語',
+      fn() {
+        const total = topLangs.reduce((t, l) => t + l.bytes, 0) || 1;
+        block(rows('max-content max-content max-content', topLangs.slice(0, 8).map((l) => [
+          s('m', l.name), h('span', {}, bar(l.bytes / topLangs[0].bytes, 28)), s('dim', `${(l.bytes / total * 100).toFixed(1)}%`),
+        ])));
+      },
+    },
+    skills: {
+      desc: 'スキルタグ',
+      fn() { block(h('div', { class: 'tags' }, D.skills.slice(0, 24).map((t) => h('span', {}, s('dim', '['), s('c', t.name), s('dim', ']'))))); },
+    },
+    log: {
+      usage: 'git log', desc: '最近の活動',
+      fn(args, opt) {
+        const hash = (str) => { let x = 0; for (const ch of str) x = (x * 31 + ch.charCodeAt(0)) >>> 0; return x.toString(16).padStart(7, '0').slice(0, 7); };
+        const items = D.activities.slice(0, opt.limit ?? 12);
+        block(rows('max-content max-content max-content minmax(0,1fr)', items.map((x) => [
+          s('y', hash(x.url + x.date)), s('dim', x.date.slice(0, 10)), s('g', `(${x.type})`), a(x.title, x.url),
+        ])));
+      },
+    },
+    open: {
+      usage: 'open', desc: 'リンクを開く（open github など）',
+      fn(args) {
+        const key = args[0];
+        if (!key) {
+          block(rows('max-content minmax(0,1fr)', D.links.map((l) => [run(`open ${l.key}`, l.key), a(l.title || l.url, l.url)])));
+          return;
+        }
+        const l = D.links.find((x) => x.key === key);
+        if (!l) { print(`open: unknown target '${key}'. try `, run('open')); return; }
+        print(s('dim', 'opening '), a(l.url, l.url), s('dim', ' …'));
+        window.open(l.url, '_blank', 'noopener');
+      },
+    },
+    'cat': {
+      usage: 'cat README.md', desc: 'このページについて',
+      fn(args) {
+        if (args[0] && args[0].toLowerCase() !== 'readme.md') { print(`cat: ${args[0]}: No such file or directory`); return; }
+        block(h('div', {},
+          h('div', { class: 'c' }, '# README.md'),
+          h('div', {}, 'このページは LAPRAS の公開 API から毎日自動で生成されています。'),
+          h('div', {}, '自分の ID に書き換えるだけで、同じページを GitHub Pages に作れます。'),
+          h('div', { class: 'dim' }, `built at ${D.built_at} · data: `, a('LAPRAS', D.links.find((x) => x.key === 'lapras')?.url)),
+        ));
+      },
+    },
+    history: { desc: '入力したコマンドの履歴', fn() { hist.forEach((c, i) => print(s('dim', String(i + 1).padStart(4)), '  ', c)); } },
+    clear: { desc: '画面をクリア', fn() { out.replaceChildren(); } },
+    sudo: {
+      hidden: true,
+      async fn(args) {
+        if (args.join(' ').includes('hire')) {
+          print(s('dim', `[sudo] password for recruiter: `), '********');
+          await sleep(reduced ? 0 : 600);
+          print(s('g', 'Access granted.'), ' 続きは ', a('LAPRAS', D.links.find((x) => x.key === 'lapras')?.url), ' でどうぞ。');
+        } else {
+          print(`recruiter is not in the sudoers file. This incident will be reported. `, s('dim', '(hint: sudo hire-me)'));
+        }
+      },
+    },
+    exit: { hidden: true, fn() { print('logout'); print(s('dim', '……と見せかけて、まだここにいます。'), run('help')); } },
+    echo: { hidden: true, fn(args) { print(args.join(' ')); } },
+  };
+  const aliases = { lapras: 'score', git: 'log', about: 'cat', links: 'open', dir: 'ls', ll: 'ls' };
+
+  // ---------- execution ----------
+  const hist = [];
+  let histIdx = 0;
+  let busy = false;
+
+  async function dispatch(line) {
+    const [main, ...pipes] = line.split('|').map((x) => x.trim());
+    const opt = {};
+    for (const p of pipes) {
+      const m = p.match(/^head(?:\s+-n)?\s+-?(\d+)$/);
+      if (m) opt.limit = Number(m[1]);
+    }
+    let [name, ...args] = main.split(/\s+/).filter(Boolean);
+    if (!name) return;
+    if (name === 'lapras' && args[0] === 'score') args.shift();
+    if (name === 'git' && args[0] === 'log') args.shift();
+    name = aliases[name] || name;
+    const c = cmds[name];
+    if (!c) { print(`${name}: command not found. try `, run('help')); return; }
+    await c.fn(args, opt);
+  }
+
+  async function execute(line, { echo = true } = {}) {
+    if (echo) print(...ps1(), line);
+    if (line.trim()) { hist.push(line); histIdx = hist.length; }
+    await dispatch(line);
+    scrollDown();
+  }
+
+  // ---------- boot sequence ----------
+  let skipping = reduced;
+  const boot = ['neofetch', 'ls articles | head -3', 'ls repos | head -5'];
+  const skip = () => { skipping = true; };
+  addEventListener('keydown', skip, { once: true });
+  addEventListener('pointerdown', skip, { once: true });
+
+  async function typeLine(cmd) {
+    const typed = h('span', {});
+    print(...ps1(), typed);
+    const cursor = s('cursor', '');
+    typed.after(cursor);
+    if (!skipping) await sleep(350);
+    for (const ch of cmd) {
+      if (skipping) { typed.textContent = cmd; break; }
+      typed.textContent += ch;
+      scrollDown();
+      await sleep(35 + Math.random() * 55);
+    }
+    if (!skipping) await sleep(220);
+    cursor.remove();
+    await execute(cmd, { echo: false });
+    if (!skipping) await sleep(500);
+  }
+
+  (async () => {
+    print(s('dim', `Last login: ${new Date().toDateString()} from lapras.com`));
+    for (const cmd of boot) await typeLine(cmd);
+    print(s('dim', 'type '), run('help'), s('dim', ' to see what else is here.'));
+    skipHint.classList.add('gone');
+    inputLine.querySelector('.ps1').replaceChildren(...ps1());
+    inputLine.classList.add('on');
+    input.focus({ preventScroll: true });
+    scrollDown();
+  })();
+
+  // ---------- input ----------
+  const complete = (val) => {
+    const parts = val.split(/\s+/);
+    let pool;
+    if (parts.length === 1) pool = [...Object.keys(cmds).filter((k) => !cmds[k].hidden), 'git', 'lapras'];
+    else if (parts[0] === 'ls') pool = nonEmptyDirs;
+    else if (parts[0] === 'open') pool = D.links.map((l) => l.key);
+    else if (parts[0] === 'lapras') pool = ['score'];
+    else if (parts[0] === 'git') pool = ['log'];
+    else return val;
+    const last = parts.at(-1);
+    const hits = pool.filter((p) => p.startsWith(last));
+    if (hits.length === 1) { parts[parts.length - 1] = hits[0]; return parts.join(' ') + ' '; }
+    if (hits.length > 1) { print(...ps1(), val); print(hits.join('  ')); scrollDown(); }
+    return val;
+  };
+
+  input.addEventListener('keydown', async (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (busy) return;
+      const v = input.value; input.value = '';
+      busy = true;
+      try { await execute(v); } finally { busy = false; }
+    } else if (e.key === 'Tab') {
+      e.preventDefault(); input.value = complete(input.value);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault(); if (histIdx > 0) input.value = hist[--histIdx];
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault(); histIdx = Math.min(hist.length, histIdx + 1); input.value = hist[histIdx] ?? '';
+    } else if (e.key === 'l' && e.ctrlKey) {
+      e.preventDefault(); out.replaceChildren();
+    } else if (e.key === 'c' && e.ctrlKey && !getSelection().toString()) {
+      e.preventDefault(); print(...ps1(), input.value, '^C'); input.value = '';
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('a, .run') || getSelection().toString()) return;
+    if (inputLine.classList.contains('on')) input.focus({ preventScroll: true });
+  });
+})();
+</script>
+</body>
+</html>
