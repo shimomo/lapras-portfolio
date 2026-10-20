@@ -1,0 +1,1059 @@
+{
+  "laprasId": "shimomo",
+  "name": "Yuichi Shimo",
+  "bio": "バックエンド寄りのフルスタックエンジニア",
+  "role": "バックエンドエンジニア",
+  "organization": "",
+  "location": "Japan",
+  "avatar": "avatar.jpg",
+  "scores": {
+    "tech": 3.43,
+    "business": 3.48,
+    "influence": 2.65,
+    "techPercentile": 80.7,
+    "breakdown": [
+      {
+        "key": "github",
+        "score": 3.37,
+        "percentile": 77.4
+      },
+      {
+        "key": "articles",
+        "score": 3.32,
+        "percentile": 74.1
+      },
+      {
+        "key": "events",
+        "score": 0,
+        "percentile": null
+      },
+      {
+        "key": "skill tags",
+        "score": 4.03,
+        "percentile": 98.1
+      }
+    ]
+  },
+  "links": [
+    {
+      "key": "github",
+      "label": "GitHub",
+      "url": "https://github.com/shimomo"
+    },
+    {
+      "key": "zenn",
+      "label": "Zenn",
+      "url": "https://zenn.dev/shimomo"
+    },
+    {
+      "key": "speakerdeck",
+      "label": "Speaker Deck",
+      "url": "https://speakerdeck.com/shimomo"
+    },
+    {
+      "key": "connpass",
+      "label": "connpass",
+      "url": "https://connpass.com/user/shimomo0502"
+    },
+    {
+      "key": "lapras",
+      "label": "LAPRAS",
+      "url": "https://lapras.com/public/shimomo"
+    },
+    {
+      "key": "site",
+      "label": "Yuichi Shimo | 経歴と作ったもの",
+      "url": "https://shimomo.net/"
+    }
+  ],
+  "articles": [
+    {
+      "date": "2026-10-17",
+      "title": "求人サイトの SES・派遣の求人は、どこまで見分けられるのか — Chrome 拡張機能を作って測ってみた",
+      "url": "https://zenn.dev/shimomo/articles/9f66a551c41f1a",
+      "source": "zenn"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "PHP 8.6 の clamp() は何をして、何をしないのか — RC2 で確かめてみた",
+      "url": "https://zenn.dev/shimomo/articles/8499e432bac303",
+      "source": "zenn"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "laravel/vet は何を止めて、何を止めないのか — 架空の悪性パッケージで確かめてみた",
+      "url": "https://zenn.dev/shimomo/articles/299809443d5505",
+      "source": "zenn"
+    }
+  ],
+  "talks": [
+    {
+      "date": "2019-03-21",
+      "title": "JP_Stripes Connect 2019 - 新卒エンジニアの苦悩",
+      "url": "https://speakerdeck.com/shimomo/jp-stripes-connect-2019-xin-zu-enziniafalseku-nao"
+    },
+    {
+      "date": "2018-09-12",
+      "title": "JP_Stripes 福岡 Vol.4 - 新入社員がカード決済に取り組んだ話",
+      "url": "https://speakerdeck.com/shimomo/jp-stripes-fu-gang-vol-dot-4-xin-ru-she-yuan-gakadojue-ji-niqu-rizu-ndahua"
+    },
+    {
+      "date": "2018-09-12",
+      "title": "新入社員がカード決済に取り組んだ話",
+      "url": "https://speakerdeck.com/shimomo/xin-ru-she-yuan-gakadojue-ji-niqu-rizu-ndahua"
+    }
+  ],
+  "repos": [
+    {
+      "name": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs",
+      "language": "PHP",
+      "stars": 9,
+      "description": "[Deprecated] A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
+    },
+    {
+      "name": "boatraceopenapi/results",
+      "url": "https://github.com/boatraceopenapi/results",
+      "language": "PHP",
+      "stars": 9,
+      "description": "[Deprecated] A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
+    },
+    {
+      "name": "shimomo/narikiri",
+      "url": "https://github.com/shimomo/narikiri",
+      "language": "Go",
+      "stars": 8,
+      "description": "Stripe and ngrok synchronization command"
+    },
+    {
+      "name": "boatraceopenapi/api",
+      "url": "https://github.com/boatraceopenapi/api",
+      "language": "PHP",
+      "stars": 6,
+      "description": "A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
+    },
+    {
+      "name": "boatracevibeproject/scraper",
+      "url": "https://github.com/boatracevibeproject/scraper",
+      "language": "PHP",
+      "stars": 3,
+      "description": "BVP Scraper：公式サイトから出走表・直前情報・オッズ・結果を取得する PHP ライブラリ | Scrapes programs, previews, odds and results from boatrace.jp"
+    },
+    {
+      "name": "shimomo/ibeacon-scanner",
+      "url": "https://github.com/shimomo/ibeacon-scanner",
+      "language": "Go",
+      "stars": 3,
+      "description": "iBeacon Scanner"
+    },
+    {
+      "name": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews",
+      "language": "PHP",
+      "stars": 2,
+      "description": "[Deprecated] A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
+    },
+    {
+      "name": "autorace/tokyo-sports-scraper",
+      "url": "https://github.com/autorace/tokyo-sports-scraper",
+      "language": "Python",
+      "stars": 1,
+      "description": "東京スポーツのオートレース情報をスクレイピングするためのライブラリ"
+    },
+    {
+      "name": "boatracevibeproject/scraper-stadiums",
+      "url": "https://github.com/boatracevibeproject/scraper-stadiums",
+      "language": "PHP",
+      "stars": 0,
+      "description": "BVP Scraper Stadiums：各場の公式サイトにしか無い情報（選手コメントなど）を取得する PHP ライブラリ | Scrapes stadium-only data such as racer comments"
+    },
+    {
+      "name": "keirin-platform/.github",
+      "url": "https://github.com/keirin-platform/.github",
+      "language": "",
+      "stars": 0,
+      "description": "keirin-platform 組織のプロフィール（profile/README.md）と共通設定"
+    },
+    {
+      "name": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform",
+      "language": "Python",
+      "stars": 0,
+      "description": "競輪の出走表・レース結果を収集し、昇級・降級の影響を補正した競走得点を算出・表示する個人用データ基盤（Python / GitHub Actions / Streamlit）"
+    },
+    {
+      "name": "shimomo/autorace-news-collector",
+      "url": "https://github.com/shimomo/autorace-news-collector",
+      "language": "PHP",
+      "stars": 0,
+      "description": "オートレースの最新記事を AUTORACE.JP・日刊スポーツ・レース場公式サイト・YouTube のフィードと API から集める PHP ライブラリ / Collects the latest AutoRace news from official feeds and APIs"
+    },
+    {
+      "name": "shimomo/funaken-lab",
+      "url": "https://github.com/shimomo/funaken-lab",
+      "language": "TypeScript",
+      "stars": 0,
+      "description": "ボートレース（競艇）の買い方を実際のレース結果で検証するバックテストの実験室 / A browser-only backtesting lab for boatrace betting strategies"
+    },
+    {
+      "name": "shimomo/keirin-news-collector",
+      "url": "https://github.com/shimomo/keirin-news-collector",
+      "language": "PHP",
+      "stars": 0,
+      "description": "競輪の最新記事を KEIRIN.JP・新聞各紙・競輪場公式サイトのフィードと API から集める PHP ライブラリ / Collects the latest Keirin news from official feeds and APIs"
+    },
+    {
+      "name": "shimomo/lab-laravel-vet",
+      "url": "https://github.com/shimomo/lab-laravel-vet",
+      "language": "Python",
+      "stars": 0,
+      "description": "laravel/vet（v0.2.1）の挙動を、手元で配る架空パッケージ vetlab/widget で確かめるための検証環境"
+    },
+    {
+      "name": "shimomo/lab-php86-clamp",
+      "url": "https://github.com/shimomo/lab-php86-clamp",
+      "language": "PHP",
+      "stars": 0,
+      "description": "PHP 8.6 で追加される clamp() の挙動を、公式 Docker イメージの 8.6.0RC2 で確かめるための検証環境"
+    },
+    {
+      "name": "shimomo/ses-filter",
+      "url": "https://github.com/shimomo/ses-filter",
+      "language": "TypeScript",
+      "stars": 0,
+      "description": "エンジニア求人サイトの検索結果で、SES・派遣の求人を理由つきで畳む Chrome 拡張機能"
+    },
+    {
+      "name": "shimomo/shimomo",
+      "url": "https://github.com/shimomo/shimomo",
+      "language": "Python",
+      "stars": 0,
+      "description": "shimomo's portfolio"
+    },
+    {
+      "name": "shimomo/tech-trends",
+      "url": "https://github.com/shimomo/tech-trends",
+      "language": "TypeScript",
+      "stars": 0,
+      "description": "Daily Web/AI tech trends from GitHub Trending and Zenn"
+    },
+    {
+      "name": "turnmark/turnmark.github.io",
+      "url": "https://github.com/turnmark/turnmark.github.io",
+      "language": "",
+      "stars": 0,
+      "description": "A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-10-20",
+      "title": "【“AIに任せる”の正解とは？】",
+      "url": "https://flexy.connpass.com/event/408212/",
+      "role": "attendee"
+    }
+  ],
+  "languages": [
+    {
+      "name": "PHP",
+      "bytes": 2197429
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 442113
+    },
+    {
+      "name": "Blade",
+      "bytes": 165080
+    },
+    {
+      "name": "Python",
+      "bytes": 75901
+    },
+    {
+      "name": "PowerShell",
+      "bytes": 50844
+    },
+    {
+      "name": "HTML",
+      "bytes": 46294
+    },
+    {
+      "name": "Shell",
+      "bytes": 42337
+    },
+    {
+      "name": "Ruby",
+      "bytes": 32667
+    },
+    {
+      "name": "Sass",
+      "bytes": 19448
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 12251
+    },
+    {
+      "name": "CSS",
+      "bytes": 10606
+    },
+    {
+      "name": "Go",
+      "bytes": 8295
+    },
+    {
+      "name": "SCSS",
+      "bytes": 5587
+    },
+    {
+      "name": "dockerfile",
+      "bytes": 4085
+    },
+    {
+      "name": "Vue.js",
+      "bytes": 552
+    },
+    {
+      "name": "CoffeeScript",
+      "bytes": 211
+    }
+  ],
+  "skills": [
+    {
+      "name": "PHP",
+      "level": 10
+    },
+    {
+      "name": "Scraper",
+      "level": 10
+    },
+    {
+      "name": "BOATRACE",
+      "level": 9
+    },
+    {
+      "name": "ボートレース",
+      "level": 9
+    },
+    {
+      "name": "ライブラリ",
+      "level": 9
+    },
+    {
+      "name": "API",
+      "level": 8
+    },
+    {
+      "name": "Actions",
+      "level": 8
+    },
+    {
+      "name": "GitHub",
+      "level": 8
+    },
+    {
+      "name": "project",
+      "level": 8
+    },
+    {
+      "name": "プロジェクト",
+      "level": 8
+    },
+    {
+      "name": "競艇",
+      "level": 8
+    },
+    {
+      "name": "Pages",
+      "level": 7
+    },
+    {
+      "name": "Read",
+      "level": 7
+    },
+    {
+      "name": "Subtree",
+      "level": 7
+    },
+    {
+      "name": "archived",
+      "level": 7
+    },
+    {
+      "name": "component",
+      "level": 7
+    },
+    {
+      "name": "publishing",
+      "level": 7
+    },
+    {
+      "name": "see",
+      "level": 7
+    },
+    {
+      "name": "split",
+      "level": 7
+    },
+    {
+      "name": "データ",
+      "level": 7
+    },
+    {
+      "name": "公式サイト",
+      "level": 7
+    },
+    {
+      "name": "DEPRECATED",
+      "level": 6
+    },
+    {
+      "name": "Fukuoka",
+      "level": 6
+    },
+    {
+      "name": "Tamagawa",
+      "level": 6
+    },
+    {
+      "name": "library",
+      "level": 6
+    },
+    {
+      "name": "moved",
+      "level": 6
+    },
+    {
+      "name": "trimmer",
+      "level": 6
+    },
+    {
+      "name": "パッケージ",
+      "level": 6
+    },
+    {
+      "name": "名称",
+      "level": 6
+    },
+    {
+      "name": "BOA",
+      "level": 5
+    },
+    {
+      "name": "JP",
+      "level": 5
+    },
+    {
+      "name": "Programs",
+      "level": 5
+    },
+    {
+      "name": "Python",
+      "level": 5
+    },
+    {
+      "name": "Viz",
+      "level": 5
+    },
+    {
+      "name": "converter",
+      "level": 5
+    },
+    {
+      "name": "core",
+      "level": 5
+    },
+    {
+      "name": "motivation",
+      "level": 5
+    },
+    {
+      "name": "package",
+      "level": 5
+    },
+    {
+      "name": "prefecture",
+      "level": 5
+    },
+    {
+      "name": "previews",
+      "level": 5
+    },
+    {
+      "name": "proxy",
+      "level": 5
+    },
+    {
+      "name": "results",
+      "level": 5
+    },
+    {
+      "name": "stadium",
+      "level": 5
+    },
+    {
+      "name": "tsu",
+      "level": 5
+    },
+    {
+      "name": "バックエンドエンジニア",
+      "level": 5
+    },
+    {
+      "name": "プロキシ",
+      "level": 5
+    },
+    {
+      "name": "基盤",
+      "level": 5
+    },
+    {
+      "name": "情報",
+      "level": 5
+    },
+    {
+      "name": "番号",
+      "level": 5
+    },
+    {
+      "name": "Ames",
+      "level": 4
+    },
+    {
+      "name": "Codes",
+      "level": 4
+    },
+    {
+      "name": "Developing",
+      "level": 4
+    },
+    {
+      "name": "Japanese",
+      "level": 4
+    },
+    {
+      "name": "Ninja",
+      "level": 4
+    },
+    {
+      "name": "Purchasing",
+      "level": 4
+    },
+    {
+      "name": "Trims",
+      "level": 4
+    },
+    {
+      "name": "Webアプリケーション",
+      "level": 4
+    },
+    {
+      "name": "and n",
+      "level": 4
+    },
+    {
+      "name": "arrays",
+      "level": 4
+    },
+    {
+      "name": "converting",
+      "level": 4
+    },
+    {
+      "name": "converts",
+      "level": 4
+    },
+    {
+      "name": "names",
+      "level": 4
+    },
+    {
+      "name": "nested",
+      "level": 4
+    },
+    {
+      "name": "numbers",
+      "level": 4
+    },
+    {
+      "name": "odds",
+      "level": 4
+    },
+    {
+      "name": "packages",
+      "level": 4
+    },
+    {
+      "name": "platform",
+      "level": 4
+    },
+    {
+      "name": "recursively",
+      "level": 4
+    },
+    {
+      "name": "region",
+      "level": 4
+    },
+    {
+      "name": "scrapes",
+      "level": 4
+    },
+    {
+      "name": "streamlit",
+      "level": 4
+    },
+    {
+      "name": "strings",
+      "level": 4
+    },
+    {
+      "name": "tickets",
+      "level": 4
+    },
+    {
+      "name": "かな",
+      "level": 4
+    },
+    {
+      "name": "アーカイブ",
+      "level": 4
+    },
+    {
+      "name": "オッス",
+      "level": 4
+    },
+    {
+      "name": "コード",
+      "level": 4
+    },
+    {
+      "name": "モチベーション",
+      "level": 4
+    },
+    {
+      "name": "レース",
+      "level": 4
+    },
+    {
+      "name": "体重",
+      "level": 4
+    },
+    {
+      "name": "個人",
+      "level": 4
+    },
+    {
+      "name": "元",
+      "level": 4
+    },
+    {
+      "name": "可視",
+      "level": 4
+    },
+    {
+      "name": "地方",
+      "level": 4
+    },
+    {
+      "name": "天候",
+      "level": 4
+    },
+    {
+      "name": "徳山",
+      "level": 4
+    },
+    {
+      "name": "文字列",
+      "level": 4
+    },
+    {
+      "name": "漢字",
+      "level": 4
+    },
+    {
+      "name": "直前",
+      "level": 4
+    },
+    {
+      "name": "相互",
+      "level": 4
+    },
+    {
+      "name": "競輪",
+      "level": 4
+    },
+    {
+      "name": "自動",
+      "level": 4
+    },
+    {
+      "name": "舟券",
+      "level": 4
+    },
+    {
+      "name": "英語",
+      "level": 4
+    },
+    {
+      "name": "選手",
+      "level": 4
+    },
+    {
+      "name": "都道府県",
+      "level": 4
+    },
+    {
+      "name": "階層",
+      "level": 4
+    },
+    {
+      "name": "Tokyo",
+      "level": 3
+    },
+    {
+      "name": "TypeScript",
+      "level": 3
+    },
+    {
+      "name": "sports",
+      "level": 3
+    },
+    {
+      "name": "オートレース",
+      "level": 3
+    },
+    {
+      "name": "スクレイピング",
+      "level": 3
+    },
+    {
+      "name": "津",
+      "level": 3
+    },
+    {
+      "name": "AI",
+      "level": 1
+    },
+    {
+      "name": "stripes",
+      "level": 1
+    },
+    {
+      "name": "エンジニア",
+      "level": 1
+    },
+    {
+      "name": "カート",
+      "level": 1
+    },
+    {
+      "name": "バックエンド",
+      "level": 1
+    },
+    {
+      "name": "フルスタック",
+      "level": 1
+    },
+    {
+      "name": "新入社員",
+      "level": 1
+    }
+  ],
+  "activities": [
+    {
+      "date": "2026-10-20",
+      "title": "【“AIに任せる”の正解とは？】",
+      "url": "https://flexy.connpass.com/event/408212/",
+      "type": "connpass"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "shimomo/tech-trends",
+      "url": "https://github.com/shimomo/tech-trends",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "shimomo/shimomo",
+      "url": "https://github.com/shimomo/shimomo",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-17",
+      "title": "求人サイトの SES・派遣の求人は、どこまで見分けられるのか — Chrome 拡張機能を作って測ってみた",
+      "url": "https://zenn.dev/shimomo/articles/9f66a551c41f1a",
+      "type": "zenn"
+    },
+    {
+      "date": "2026-10-17",
+      "title": "shimomo/ses-filter",
+      "url": "https://github.com/shimomo/ses-filter",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "shimomo/keirin-news-collector",
+      "url": "https://github.com/shimomo/keirin-news-collector",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "shimomo/autorace-news-collector",
+      "url": "https://github.com/shimomo/autorace-news-collector",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-07",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-06",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-05",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-04",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-04",
+      "title": "keirin-platform/.github",
+      "url": "https://github.com/keirin-platform/.github/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-03",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "PHP 8.6 の clamp() は何をして、何をしないのか — RC2 で確かめてみた",
+      "url": "https://zenn.dev/shimomo/articles/8499e432bac303",
+      "type": "zenn"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "shimomo/lab-php86-clamp",
+      "url": "https://github.com/shimomo/lab-php86-clamp",
+      "type": "github"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "laravel/vet は何を止めて、何を止めないのか — 架空の悪性パッケージで確かめてみた",
+      "url": "https://zenn.dev/shimomo/articles/299809443d5505",
+      "type": "zenn"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "shimomo/lab-laravel-vet",
+      "url": "https://github.com/shimomo/lab-laravel-vet",
+      "type": "github"
+    },
+    {
+      "date": "2026-09-26",
+      "title": "shimomo/funaken-lab",
+      "url": "https://github.com/shimomo/funaken-lab/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-09-25",
+      "title": "shimomo/funaken-lab",
+      "url": "https://github.com/shimomo/funaken-lab/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-09-25",
+      "title": "shimomo/funaken-lab",
+      "url": "https://github.com/shimomo/funaken-lab",
+      "type": "github"
+    },
+    {
+      "date": "2025-10-02",
+      "title": "boatraceopenapi/results",
+      "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-10-02",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-10-02",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-09-26",
+      "title": "boatracevibeproject/trimmer",
+      "url": "https://github.com/boatracevibeproject/trimmer/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-09-04",
+      "title": "shimomo/bvp-scraper-core",
+      "url": "https://github.com/shimomo/bvp-scraper-core/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-09-03",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-09-02",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-09-01",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-31",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-31",
+      "title": "boatraceopenapi/results",
+      "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-31",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-30",
+      "title": "boatraceopenapi/results",
+      "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-30",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-29",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-29",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-28",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-28",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-27",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-26",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-26",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-26",
+      "title": "boatracevibeproject/stadium",
+      "url": "https://github.com/boatracevibeproject/stadium/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-24",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-17",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-16",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-14",
+      "title": "autorace/tokyo-sports-scraper",
+      "url": "https://github.com/autorace/tokyo-sports-scraper/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-13",
+      "title": "autorace/tokyo-sports-scraper",
+      "url": "https://github.com/autorace/tokyo-sports-scraper/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2025-08-12",
+      "title": "autorace/tokyo-sports-scraper",
+      "url": "https://github.com/autorace/tokyo-sports-scraper/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    }
+  ],
+  "counts": {
+    "publicRepos": 26,
+    "stars": 41,
+    "followers": 12
+  }
+}
