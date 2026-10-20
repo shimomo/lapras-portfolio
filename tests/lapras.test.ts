@@ -103,7 +103,15 @@ test("403 is not retried", async () => {
   expect(calls).toHaveLength(1);
 });
 
-test.each(["not json", "[]", "null"])("unexpected body %s", async (body) => {
+test.each([
+  "not json",
+  "[]",
+  "null",
+  "{}",
+  '{"error":"maintenance"}',
+  '{"data":{"name":"Alice"}}',
+  '{"name":"  "}',
+])("unexpected body %s", async (body) => {
   const { http } = stubHttp([new Response(body)]);
   const error = await fetchLapras("shimomo", http, stubSleep().sleep).catch(
     (e) => e,

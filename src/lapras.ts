@@ -71,6 +71,12 @@ export async function fetchLapras(
   if (typeof body !== "object" || body === null || Array.isArray(body)) {
     throw unexpected(Array.isArray(body) ? "array" : String(body));
   }
+  // Every public portfolio has a name. Without one the format has changed,
+  // and publishing would overwrite the page with an empty one.
+  const name = (body as Record<string, unknown>).name;
+  if (typeof name !== "string" || !name.trim()) {
+    throw unexpected("name フィールドがありません");
+  }
   return body as Record<string, unknown>;
 }
 

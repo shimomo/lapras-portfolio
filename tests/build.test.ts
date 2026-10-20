@@ -110,6 +110,16 @@ test("404 writes nothing", async () => {
   expect(await exists(snapshot())).toBe(false);
 });
 
+test("a 200 in an unexpected shape writes nothing", async () => {
+  await writeConfig({ lapras_id: "shimomo", theme: "plain" });
+  const { http } = stubHttp({ json: new Response("{}") });
+  const error = await build(http).catch((e) => e);
+  expect(error).toBeInstanceOf(FetchError);
+  expect(error.message).toContain("想定外のデータ");
+  expect(await exists(join(out, "index.html"))).toBe(false);
+  expect(await exists(snapshot())).toBe(false);
+});
+
 test("avatar failure still builds", async () => {
   vi.spyOn(console, "warn").mockImplementation(() => {});
   await writeConfig({ lapras_id: "shimomo", theme: "plain" });
