@@ -95,3 +95,10 @@ export interface BuildMeta {
   /** ISO 8601 (UTC); runBuild sets it from now(). */
   builtAt: string;
 }
+
+// Default export of themes/<name>/index.ts. `assets` are file names inside
+// that directory, copied next to index.html.
+export interface Theme {
+  assets: string[];
+  render(data: PortfolioData, meta: BuildMeta): string;
+}
