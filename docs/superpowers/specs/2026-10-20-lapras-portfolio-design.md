@@ -73,7 +73,7 @@ LAPRAS 側も、公開 API を個人のポートフォリオサイトに組み�
 ```
 config.json  (lapras_id, theme)
    │
-[GitHub Actions: build-deploy]  きっかけ: 毎日 1 回 / main への push / 手動実行
+[GitHub Actions: build-deploy]  きっかけ: main への push / 手動実行 / daily からの呼び出し（毎日 1 回）
    1. fetch   https://lapras.com/public/<lapras_id>.json
    2. shape   LAPRAS の JSON → 表示用データ（6 章）に整形・正規化
    3. avatar  iconimage_url の画像をダウンロード（失効する前に）
@@ -213,7 +213,8 @@ config.json  (lapras_id, theme)
 
 ## 8. GitHub Actions
 
-- ワークフロー `build-deploy`: きっかけは `schedule`（1 日 1 回）、`main` への push、手動実行（`workflow_dispatch`）
+- ワークフロー `build-deploy`: きっかけは `main` への push、手動実行（`workflow_dispatch`）、`daily` からの呼び出し（`workflow_call`）
+- 毎日の再生成はワークフロー `daily`（`schedule` で 1 日 1 回、`build-deploy` を呼ぶだけ）に分ける。フォークでは `schedule` を含むワークフローが「Actions を有効にする」操作のあとも個別に無効（`disabled_fork`）のまま残るため（2026-10-20 にフォークで確認）。`build-deploy` は成功するたびに Actions API で `daily` を有効にし、できなかったときはサマリーに手順を出す。これは 60 日停止への対策も兼ねる
   - `config.json` を書き換えて push すれば、すぐに自分のページが生成される
 - 権限は `contents: write`（データのコミット）、`pages: write`、`id-token: write`（デプロイ）
 - `concurrency` で同時実行を防ぐ

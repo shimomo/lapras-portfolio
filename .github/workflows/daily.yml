@@ -1,0 +1,20 @@
+name: daily
+
+# The daily rebuild. It lives apart from build-deploy.yml because a fork keeps
+# scheduled workflows disabled; build-deploy turns this one on through the API
+# after its first successful build.
+on:
+  schedule:
+    # 21:23 UTC = 06:23 JST
+    - cron: "23 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: write
+
+jobs:
+  build-deploy:
+    uses: ./.github/workflows/build-deploy.yml

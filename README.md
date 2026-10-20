@@ -13,7 +13,7 @@
 **前提:** LAPRAS でポートフォリオを公開設定にしておきます。公開ページの URL `https://lapras.com/public/<ID>` の `<ID>` が、あなたの ID です。
 
 1. このリポジトリを **フォーク** する
-2. フォークした先の **Actions** タブを開き、ワークフローを有効にする
+2. フォークした先の **Actions** タブを開き、「**I understand my workflows, go ahead and enable them**」を押してワークフローを有効にする
 3. **Settings → Pages → Source** を「**GitHub Actions**」にする
 4. `config.json` の `lapras_id` を自分の ID に書き換えてコミットする
 
@@ -25,6 +25,8 @@
 ```
 
 数分で `https://<ユーザー名>.github.io/lapras-portfolio/` に公開されます。あとは毎朝 6 時ごろ（日本時間）に自動で更新されます。
+
+毎朝の更新は `daily` という別のワークフローが担当します。フォークでは定期実行のワークフローが無効のまま残るので、最初のページができたときに自動で有効にしています。Actions のサマリーに「毎朝の自動更新を有効にできませんでした」と出たときは、Actions タブで **daily** を選び、**Enable workflow** を押してください。
 
 `lapras_id` には公開ページの URL をそのまま貼っても大丈夫です。
 
@@ -91,10 +93,11 @@ export default theme;
 
 | 症状 | 確かめること |
 | --- | --- |
-| ページが出ない | Settings → Pages → Source が「GitHub Actions」になっているか。Actions タブで `build-deploy` が失敗していないか |
+| ページが出ない | Settings → Pages → Source が「GitHub Actions」になっているか。Actions タブで `build-deploy` が失敗していないか。設定を直したら `build-deploy` を手動で実行（Run workflow） |
 | `LAPRAS のポートフォリオが見つかりません` で失敗する | LAPRAS でポートフォリオが公開設定になっているか。`lapras_id` が正しいか |
 | 「まだ設定されていません」と出る | `config.json` の `lapras_id` が `shimomo` のまま。自分の ID に書き換えてください |
-| 更新が止まった | Actions タブで `build-deploy` が無効になっていないか。無効なら有効にして、手動で実行（Run workflow） |
+| 毎朝の更新が止まった | Actions タブで `daily` が無効になっていないか。無効なら **Enable workflow** を押す |
+| `build-deploy` が無効（disabled）と表示される | Actions タブで `build-deploy` を選び、**Enable workflow** を押してから手動で実行（Run workflow） |
 | フォークで何も動かない | Actions タブでワークフローを有効にしたか |
 
 ## 開発
