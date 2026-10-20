@@ -205,3 +205,8 @@ test("banner uses initials in the Big font", () => {
   expect(art.endsWith("\n")).toBe(false);
   expect(render(shimomo)).toContain('<pre class="art">');
 });
+
+test("whoami is described as what it prints", () => {
+  const whoami = buildCommands(shimomo, meta).find((c) => c.key === "whoami");
+  expect(whoami?.desc).toBe("名前と bio");
+});

@@ -271,7 +271,7 @@ export function buildCommands(data: PortfolioData, meta: BuildMeta): Command[] {
     ...cmd("neofetch", "プロフィールの概要", true, neofetch(data)),
     ...cmd(
       "whoami",
-      "名前と肩書き",
+      "名前と bio",
       false,
       line(data.name, data.bio ? s("dim", ` — ${data.bio}`) : ""),
     ),
