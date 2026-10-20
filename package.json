@@ -8,12 +8,14 @@
   "scripts": {
     "build": "tsx src/cli.ts",
     "test": "vitest run",
+    "test:browser": "tsx tests/browser/render.ts && playwright test",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "format": "biome format --write ."
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",
+    "@playwright/test": "1.62.1",
     "@types/node": "^26.6.5",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
