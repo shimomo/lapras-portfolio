@@ -90,3 +90,8 @@ export interface PortfolioData {
   activities: Activity[];
   counts: { publicRepos: number; stars: number; followers: number };
 }
+
+export interface BuildMeta {
+  /** ISO 8601 (UTC); runBuild sets it from now(). */
+  builtAt: string;
+}
