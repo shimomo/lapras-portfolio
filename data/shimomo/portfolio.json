@@ -10,7 +10,7 @@
     "tech": 3.43,
     "business": 3.48,
     "influence": 2.65,
-    "techPercentile": 80.7,
+    "techPercentile": 80.8,
     "breakdown": [
       {
         "key": "github",
@@ -182,6 +182,13 @@
       "description": "競輪の出走表・レース結果を収集し、昇級・降級の影響を補正した競走得点を算出・表示する個人用データ基盤（Python / GitHub Actions / Streamlit）"
     },
     {
+      "name": "shimomo/autorace-news",
+      "url": "https://github.com/shimomo/autorace-news",
+      "language": "PHP",
+      "stars": 0,
+      "description": "オートレースの公式発表・新聞記事・動画の見出しを1週間ごとにまとめた一覧"
+    },
+    {
       "name": "shimomo/autorace-news-collector",
       "url": "https://github.com/shimomo/autorace-news-collector",
       "language": "PHP",
@@ -194,6 +201,13 @@
       "language": "TypeScript",
       "stars": 0,
       "description": "ボートレース（競艇）の買い方を実際のレース結果で検証するバックテストの実験室 / A browser-only backtesting lab for boatrace betting strategies"
+    },
+    {
+      "name": "shimomo/keirin-news",
+      "url": "https://github.com/shimomo/keirin-news",
+      "language": "PHP",
+      "stars": 0,
+      "description": "競輪の選手ニュースを中心に、新聞・競輪メディア・公式・競輪場の見出しを1日ごとにまとめた一覧"
     },
     {
       "name": "shimomo/keirin-news-collector",
@@ -217,6 +231,13 @@
       "description": "PHP 8.6 で追加される clamp() の挙動を、公式 Docker イメージの 8.6.0RC2 で確かめるための検証環境"
     },
     {
+      "name": "shimomo/lapras-portfolio",
+      "url": "https://github.com/shimomo/lapras-portfolio",
+      "language": "TypeScript",
+      "stars": 0,
+      "description": "LAPRAS の公開 API から、フォークするだけで作れるポートフォリオ"
+    },
+    {
       "name": "shimomo/ses-filter",
       "url": "https://github.com/shimomo/ses-filter",
       "language": "TypeScript",
@@ -236,13 +257,6 @@
       "language": "TypeScript",
       "stars": 0,
       "description": "Daily Web/AI tech trends from GitHub Trending and Zenn"
-    },
-    {
-      "name": "turnmark/turnmark.github.io",
-      "url": "https://github.com/turnmark/turnmark.github.io",
-      "language": "",
-      "stars": 0,
-      "description": "A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
     }
   ],
   "events": [
@@ -256,11 +270,11 @@
   "languages": [
     {
       "name": "PHP",
-      "bytes": 2197429
+      "bytes": 2318049
     },
     {
       "name": "TypeScript",
-      "bytes": 442113
+      "bytes": 596194
     },
     {
       "name": "Blade",
@@ -276,11 +290,15 @@
     },
     {
       "name": "HTML",
-      "bytes": 46294
+      "bytes": 46482
     },
     {
       "name": "Shell",
       "bytes": 42337
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 36780
     },
     {
       "name": "Ruby",
@@ -291,12 +309,8 @@
       "bytes": 19448
     },
     {
-      "name": "JavaScript",
-      "bytes": 12251
-    },
-    {
       "name": "CSS",
-      "bytes": 10606
+      "bytes": 18379
     },
     {
       "name": "Go",
@@ -764,6 +778,24 @@
   "activities": [
     {
       "date": "2026-10-20",
+      "title": "shimomo/lapras-portfolio",
+      "url": "https://github.com/shimomo/lapras-portfolio",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-20",
+      "title": "shimomo/keirin-news",
+      "url": "https://github.com/shimomo/keirin-news",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-20",
+      "title": "shimomo/autorace-news",
+      "url": "https://github.com/shimomo/autorace-news",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-20",
       "title": "【“AIに任せる”の正解とは？】",
       "url": "https://flexy.connpass.com/event/408212/",
       "type": "connpass"
@@ -1052,7 +1084,7 @@
     }
   ],
   "counts": {
-    "publicRepos": 26,
+    "publicRepos": 29,
     "stars": 41,
     "followers": 12
   }
