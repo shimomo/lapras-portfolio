@@ -4,7 +4,7 @@
 
 **デモ:** https://shimomo.github.io/lapras-portfolio/
 
-![terminal テーマのスクリーンショット](docs/screenshot.png)
+![terminal テーマ。コマンドが自動で打ち込まれ、プロフィール・記事・リポジトリが出たあと、lapras score でスコアを表示する](docs/demo.gif)
 
 ぱっと見はただのターミナル。でも中身は、LAPRAS のスコア・記事・登壇・リポジトリです。
 
