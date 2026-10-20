@@ -1,0 +1,82 @@
+name: build-deploy
+
+on:
+  schedule:
+    # 21:23 UTC = 06:23 JST
+    - cron: "23 21 * * *"
+  push:
+    branches: [main]
+    paths-ignore: ["data/**", "docs/**", "tests/**", "**.md"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: write
+
+concurrency:
+  group: build-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      skipped: ${{ steps.build.outputs.skipped }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        id: build
+        run: npm run build
+
+      - name: Upload site
+        if: steps.build.outputs.skipped == 'false'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Commit data
+        if: steps.build.outputs.skipped == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "no data changes"
+          else
+            lapras_id=$(node -p "require('./config.json').lapras_id")
+            git commit -m "data: ${lapras_id} $(TZ=Asia/Tokyo date +%Y-%m-%d)"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push
+          fi
+
+      # Public repositories stop scheduled workflows after 60 days without
+      # activity. Re-enabling the workflow through the API keeps it running
+      # without asking the owner for anything.
+      - name: Keep the schedule alive
+        if: github.event_name == 'schedule' && steps.build.outputs.skipped == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/build-deploy.yml/enable"
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.skipped == 'false'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
