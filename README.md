@@ -1,12 +1,10 @@
-# lapras-portfolio
+# LAPRAS Portfolio
 
 [LAPRAS](https://lapras.com/) の公開 API から、自分のポートフォリオページを GitHub Pages に毎日自動で公開する仕組みです。フォークして `config.json` の ID を書き換えるだけで使えます。
 
-**デモ:** https://shimomo.github.io/lapras-portfolio/
+[![terminal テーマ。コマンドが自動で打ち込まれ、プロフィール・記事・リポジトリが出たあと、lapras score でスコアを表示する](docs/demo.gif)](https://shimomo.github.io/lapras-portfolio/)
 
-![terminal テーマ。コマンドが自動で打ち込まれ、プロフィール・記事・リポジトリが出たあと、lapras score でスコアを表示する](docs/demo.gif)
-
-ぱっと見はただのターミナル。でも中身は、LAPRAS のスコア・記事・登壇・リポジトリです。
+ぱっと見はただのターミナル。でも中身は、LAPRAS のスコア・記事・登壇・リポジトリです。実際の動きは、作者のページ [shimomo.github.io/lapras-portfolio](https://shimomo.github.io/lapras-portfolio/) で試せます。
 
 ## 自分のページを作る
 
@@ -115,4 +113,4 @@ npm run build            # config.json の ID で dist/ を生成
 
 ## ライセンス
 
-[MIT](LICENSE)
+LAPRAS Portfolio は [MIT license](LICENSE) の元で公開されています。
