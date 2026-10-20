@@ -30,7 +30,8 @@ function render(data: PortfolioData, meta: BuildMeta): string {
   return html`<!DOCTYPE html>
 <html lang="ja">
 <head>
-${renderHead({ title: `${data.laprasId}@${HOST}: ~`, data, stylesheets: ["style.css"] })}</head>
+${renderHead({ title: `${data.laprasId}@${HOST}: ~`, data, stylesheets: ["style.css"] })}<noscript><style>#out > section.cmd { display: block; }</style></noscript>
+</head>
 <body class="terminal">
 <main id="term" data-user="${data.laprasId}" data-host="${HOST}">
 <div id="out">

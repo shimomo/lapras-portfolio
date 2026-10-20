@@ -1,3 +1,4 @@
+import { readFile, rm, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { expect, type Page, test } from "@playwright/test";
 
@@ -182,5 +183,38 @@ test.describe("mobile", () => {
       () => document.documentElement.scrollWidth,
     );
     expect(width).toBeLessThanOrEqual(390);
+  });
+});
+
+test.describe("before terminal.js runs", () => {
+  const dir = fileURLToPath(
+    new URL("./.out/terminal/shimomo/", import.meta.url),
+  );
+  const copy = `${dir}no-script.html`;
+  test.afterEach(async () => {
+    await rm(copy, { force: true });
+  });
+  test("the transcript is not flashed", async ({ page }) => {
+    const html = await readFile(`${dir}index.html`, "utf8");
+    await writeFile(
+      copy,
+      html.replace('<script src="terminal.js" defer></script>', ""),
+    );
+    await page.goto(`file://${copy}`);
+    await expect(page.locator("#last-login")).toBeVisible();
+    for (const section of await page.locator("section.cmd").all()) {
+      await expect(section).toBeHidden();
+    }
+  });
+});
+
+test.describe("mobile input", () => {
+  test.use({ viewport: { width: 390, height: 844 } });
+  test("is at least 16px so iOS does not zoom on focus", async ({ page }) => {
+    await ready(page);
+    const size = await input(page).evaluate((el) =>
+      Number.parseFloat(getComputedStyle(el).fontSize),
+    );
+    expect(size).toBeGreaterThanOrEqual(16);
   });
 });

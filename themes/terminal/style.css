@@ -270,3 +270,22 @@ a:hover {
   background: var(--bg);
   padding: 2px 6px;
 }
+
+/* The transcript is for visitors without JS (see the <noscript> in index.ts).
+   With JS it stays hidden so it never flashes before the boot plays. */
+#out > section.cmd {
+  display: none;
+}
+
+/* iOS zooms into inputs smaller than 16px when they get focus. */
+@media (max-width: 600px) {
+  #in {
+    font-size: 16px;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  #in {
+    font-size: 16px;
+  }
+}
