@@ -20,7 +20,7 @@
       {
         "key": "articles",
         "score": 3.32,
-        "percentile": 74.1
+        "percentile": 74.4
       },
       {
         "key": "events",
@@ -67,6 +67,12 @@
     }
   ],
   "articles": [
+    {
+      "date": "2026-10-20",
+      "title": "LAPRAS のポートフォリオを、ぱっと見ただのターミナルにした — フォークして ID を変えるだけで GitHub Pages に公開",
+      "url": "https://zenn.dev/shimomo/articles/87b742fcd311a6",
+      "source": "zenn"
+    },
     {
       "date": "2026-10-17",
       "title": "求人サイトの SES・派遣の求人は、どこまで見分けられるのか — Chrome 拡張機能を作って測ってみた",
@@ -778,6 +784,12 @@
   "activities": [
     {
       "date": "2026-10-20",
+      "title": "LAPRAS のポートフォリオを、ぱっと見ただのターミナルにした — フォークして ID を変えるだけで GitHub Pages に公開",
+      "url": "https://zenn.dev/shimomo/articles/87b742fcd311a6",
+      "type": "zenn"
+    },
+    {
+      "date": "2026-10-20",
       "title": "shimomo/lapras-portfolio",
       "url": "https://github.com/shimomo/lapras-portfolio",
       "type": "github"
@@ -805,6 +817,48 @@
       "title": "shimomo/tech-trends",
       "url": "https://github.com/shimomo/tech-trends",
       "type": "github"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "boatracevibeproject/scraper-list",
+      "url": "https://github.com/boatracevibeproject/scraper-list/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "boatracevibeproject/scraper-core",
+      "url": "https://github.com/boatracevibeproject/scraper-core/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "boatracevibeproject/tokuyama-scraper",
+      "url": "https://github.com/boatracevibeproject/tokuyama-scraper/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "boatracevibeproject/mikuni-scraper",
+      "url": "https://github.com/boatracevibeproject/mikuni-scraper/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "boatracevibeproject/types",
+      "url": "https://github.com/boatracevibeproject/types/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "boatracevibeproject/purchaser",
+      "url": "https://github.com/boatracevibeproject/purchaser/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "boatracevibeproject/converter",
+      "url": "https://github.com/boatracevibeproject/converter/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
     },
     {
       "date": "2026-10-18",
@@ -946,8 +1000,8 @@
     },
     {
       "date": "2025-09-04",
-      "title": "shimomo/bvp-scraper-core",
-      "url": "https://github.com/shimomo/bvp-scraper-core/pulls?q=is:pr+author:shimomo",
+      "title": "boatracevibeproject/scraper-core",
+      "url": "https://github.com/boatracevibeproject/scraper-core/pulls?q=is:pr+author:shimomo",
       "type": "github_pr"
     },
     {
