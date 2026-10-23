@@ -244,6 +244,20 @@
       "description": "LAPRAS の公開 API から、フォークするだけで作れるポートフォリオ"
     },
     {
+      "name": "shimomo/quadview",
+      "url": "https://github.com/shimomo/quadview",
+      "language": "JavaScript",
+      "stars": 0,
+      "description": "Watch up to four YouTube videos or live streams side by side"
+    },
+    {
+      "name": "shimomo/quadview-presets",
+      "url": "https://github.com/shimomo/quadview-presets",
+      "language": "JavaScript",
+      "stars": 0,
+      "description": "Presets for QuadView"
+    },
+    {
       "name": "shimomo/ses-filter",
       "url": "https://github.com/shimomo/ses-filter",
       "language": "TypeScript",
@@ -280,43 +294,43 @@
     },
     {
       "name": "TypeScript",
-      "bytes": 596194
+      "bytes": 612249
     },
     {
       "name": "Blade",
       "bytes": 165080
     },
     {
+      "name": "JavaScript",
+      "bytes": 123269
+    },
+    {
       "name": "Python",
       "bytes": 75901
+    },
+    {
+      "name": "HTML",
+      "bytes": 57730
     },
     {
       "name": "PowerShell",
       "bytes": 50844
     },
     {
-      "name": "HTML",
-      "bytes": 46482
-    },
-    {
       "name": "Shell",
       "bytes": 42337
-    },
-    {
-      "name": "JavaScript",
-      "bytes": 36780
     },
     {
       "name": "Ruby",
       "bytes": 32667
     },
     {
-      "name": "Sass",
-      "bytes": 19448
+      "name": "CSS",
+      "bytes": 22505
     },
     {
-      "name": "CSS",
-      "bytes": 18379
+      "name": "Sass",
+      "bytes": 19448
     },
     {
       "name": "Go",
@@ -783,6 +797,18 @@
   ],
   "activities": [
     {
+      "date": "2026-10-22",
+      "title": "shimomo/quadview-presets",
+      "url": "https://github.com/shimomo/quadview-presets",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "shimomo/quadview",
+      "url": "https://github.com/shimomo/quadview",
+      "type": "github"
+    },
+    {
       "date": "2026-10-20",
       "title": "LAPRAS のポートフォリオを、ぱっと見ただのターミナルにした — フォークして ID を変えるだけで GitHub Pages に公開",
       "url": "https://zenn.dev/shimomo/articles/87b742fcd311a6",
@@ -1138,7 +1164,7 @@
     }
   ],
   "counts": {
-    "publicRepos": 29,
+    "publicRepos": 32,
     "stars": 41,
     "followers": 12
   }
