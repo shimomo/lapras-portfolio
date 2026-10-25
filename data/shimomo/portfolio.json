@@ -10,12 +10,12 @@
     "tech": 3.43,
     "business": 3.48,
     "influence": 2.65,
-    "techPercentile": 80.8,
+    "techPercentile": 80.9,
     "breakdown": [
       {
         "key": "github",
         "score": 3.37,
-        "percentile": 77.4
+        "percentile": 77.6
       },
       {
         "key": "articles",
@@ -30,7 +30,7 @@
       {
         "key": "skill tags",
         "score": 4.03,
-        "percentile": 98.1
+        "percentile": 98.2
       }
     ]
   },
@@ -202,6 +202,13 @@
       "description": "オートレースの最新記事を AUTORACE.JP・日刊スポーツ・レース場公式サイト・YouTube のフィードと API から集める PHP ライブラリ / Collects the latest AutoRace news from official feeds and APIs"
     },
     {
+      "name": "shimomo/boatrace-replay-links",
+      "url": "https://github.com/shimomo/boatrace-replay-links",
+      "language": "HTML",
+      "stars": 0,
+      "description": "日付・場・レース番号から BOATCAST のレースリプレイ（2020-01-01 以降）へのリンクを作る静的ページ"
+    },
+    {
       "name": "shimomo/funaken-lab",
       "url": "https://github.com/shimomo/funaken-lab",
       "language": "TypeScript",
@@ -302,7 +309,7 @@
     },
     {
       "name": "JavaScript",
-      "bytes": 123269
+      "bytes": 123331
     },
     {
       "name": "Python",
@@ -310,7 +317,7 @@
     },
     {
       "name": "HTML",
-      "bytes": 57730
+      "bytes": 68298
     },
     {
       "name": "PowerShell",
@@ -767,6 +774,10 @@
       "level": 3
     },
     {
+      "name": "JavaScript",
+      "level": 2
+    },
+    {
       "name": "AI",
       "level": 1
     },
@@ -797,6 +808,42 @@
   ],
   "activities": [
     {
+      "date": "2026-10-26",
+      "title": "shimomo/boatrace-replay-links",
+      "url": "https://github.com/shimomo/boatrace-replay-links",
+      "type": "github"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "shimomo/quadview",
+      "url": "https://github.com/shimomo/quadview/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "shimomo/quadview",
+      "url": "https://github.com/shimomo/quadview/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "shimomo/quadview-presets",
+      "url": "https://github.com/shimomo/quadview-presets/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
       "date": "2026-10-22",
       "title": "shimomo/quadview-presets",
       "url": "https://github.com/shimomo/quadview-presets",
@@ -804,9 +851,27 @@
     },
     {
       "date": "2026-10-22",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-22",
       "title": "shimomo/quadview",
       "url": "https://github.com/shimomo/quadview",
       "type": "github"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "keirin-platform/.github",
+      "url": "https://github.com/keirin-platform/.github/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-21",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
     },
     {
       "date": "2026-10-20",
@@ -1164,7 +1229,7 @@
     }
   ],
   "counts": {
-    "publicRepos": 32,
+    "publicRepos": 33,
     "stars": 41,
     "followers": 12
   }
