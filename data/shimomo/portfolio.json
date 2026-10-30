@@ -15,7 +15,7 @@
       {
         "key": "github",
         "score": 3.37,
-        "percentile": 77.6
+        "percentile": 77.5
       },
       {
         "key": "articles",
@@ -30,7 +30,7 @@
       {
         "key": "skill tags",
         "score": 4.03,
-        "percentile": 98.2
+        "percentile": 98.1
       }
     ]
   },
@@ -135,7 +135,7 @@
       "name": "boatraceopenapi/api",
       "url": "https://github.com/boatraceopenapi/api",
       "language": "PHP",
-      "stars": 6,
+      "stars": 5,
       "description": "A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
     },
     {
@@ -204,7 +204,7 @@
     {
       "name": "shimomo/boatrace-replay-links",
       "url": "https://github.com/shimomo/boatrace-replay-links",
-      "language": "HTML",
+      "language": "JavaScript",
       "stars": 0,
       "description": "日付・場・レース番号から BOATCAST のレースリプレイ（2020-01-01 以降）へのリンクを作る静的ページ"
     },
@@ -301,7 +301,7 @@
     },
     {
       "name": "TypeScript",
-      "bytes": 612249
+      "bytes": 613790
     },
     {
       "name": "Blade",
@@ -309,7 +309,7 @@
     },
     {
       "name": "JavaScript",
-      "bytes": 123331
+      "bytes": 138388
     },
     {
       "name": "Python",
@@ -317,7 +317,7 @@
     },
     {
       "name": "HTML",
-      "bytes": 68298
+      "bytes": 68734
     },
     {
       "name": "PowerShell",
@@ -325,7 +325,7 @@
     },
     {
       "name": "Shell",
-      "bytes": 42337
+      "bytes": 42353
     },
     {
       "name": "Ruby",
@@ -362,16 +362,16 @@
   ],
   "skills": [
     {
+      "name": "BOATRACE",
+      "level": 10
+    },
+    {
       "name": "PHP",
       "level": 10
     },
     {
       "name": "Scraper",
       "level": 10
-    },
-    {
-      "name": "BOATRACE",
-      "level": 9
     },
     {
       "name": "ボートレース",
@@ -478,10 +478,6 @@
       "level": 6
     },
     {
-      "name": "BOA",
-      "level": 5
-    },
-    {
       "name": "JP",
       "level": 5
     },
@@ -491,6 +487,10 @@
     },
     {
       "name": "Python",
+      "level": 5
+    },
+    {
+      "name": "TypeScript",
       "level": 5
     },
     {
@@ -559,6 +559,10 @@
     },
     {
       "name": "Ames",
+      "level": 4
+    },
+    {
+      "name": "BOA",
       "level": 4
     },
     {
@@ -754,10 +758,6 @@
       "level": 3
     },
     {
-      "name": "TypeScript",
-      "level": 3
-    },
-    {
       "name": "sports",
       "level": 3
     },
@@ -779,6 +779,10 @@
     },
     {
       "name": "AI",
+      "level": 1
+    },
+    {
+      "name": "Shell",
       "level": 1
     },
     {
@@ -1230,7 +1234,7 @@
   ],
   "counts": {
     "publicRepos": 33,
-    "stars": 41,
+    "stars": 40,
     "followers": 12
   }
 }
