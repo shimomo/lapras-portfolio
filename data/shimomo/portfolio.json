@@ -15,7 +15,7 @@
       {
         "key": "github",
         "score": 3.37,
-        "percentile": 77.5
+        "percentile": 77.6
       },
       {
         "key": "articles",
@@ -29,8 +29,8 @@
       },
       {
         "key": "skill tags",
-        "score": 4.03,
-        "percentile": 98.1
+        "score": 4.04,
+        "percentile": 98.2
       }
     ]
   },
@@ -111,15 +111,15 @@
   ],
   "repos": [
     {
-      "name": "boatraceopenapi/programs",
-      "url": "https://github.com/boatraceopenapi/programs",
+      "name": "boatraceopenapi/results",
+      "url": "https://github.com/boatraceopenapi/results",
       "language": "PHP",
-      "stars": 9,
+      "stars": 10,
       "description": "[Deprecated] A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
     },
     {
-      "name": "boatraceopenapi/results",
-      "url": "https://github.com/boatraceopenapi/results",
+      "name": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs",
       "language": "PHP",
       "stars": 9,
       "description": "[Deprecated] A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
@@ -297,11 +297,11 @@
   "languages": [
     {
       "name": "PHP",
-      "bytes": 2318049
+      "bytes": 2325683
     },
     {
       "name": "TypeScript",
-      "bytes": 613790
+      "bytes": 613815
     },
     {
       "name": "Blade",
@@ -309,11 +309,11 @@
     },
     {
       "name": "JavaScript",
-      "bytes": 138388
+      "bytes": 152593
     },
     {
       "name": "Python",
-      "bytes": 75901
+      "bytes": 78341
     },
     {
       "name": "HTML",
@@ -333,7 +333,7 @@
     },
     {
       "name": "CSS",
-      "bytes": 22505
+      "bytes": 24235
     },
     {
       "name": "Sass",
@@ -418,10 +418,6 @@
       "level": 7
     },
     {
-      "name": "archived",
-      "level": 7
-    },
-    {
       "name": "component",
       "level": 7
     },
@@ -442,10 +438,6 @@
       "level": 7
     },
     {
-      "name": "公式サイト",
-      "level": 7
-    },
-    {
       "name": "DEPRECATED",
       "level": 6
     },
@@ -458,11 +450,11 @@
       "level": 6
     },
     {
-      "name": "library",
+      "name": "archived",
       "level": 6
     },
     {
-      "name": "moved",
+      "name": "library",
       "level": 6
     },
     {
@@ -471,6 +463,10 @@
     },
     {
       "name": "パッケージ",
+      "level": 6
+    },
+    {
+      "name": "公式サイト",
       "level": 6
     },
     {
@@ -510,6 +506,10 @@
       "level": 5
     },
     {
+      "name": "moved",
+      "level": 5
+    },
+    {
       "name": "package",
       "level": 5
     },
@@ -527,6 +527,10 @@
     },
     {
       "name": "results",
+      "level": 5
+    },
+    {
+      "name": "scrapes",
       "level": 5
     },
     {
@@ -558,15 +562,19 @@
       "level": 5
     },
     {
+      "name": "選手",
+      "level": 5
+    },
+    {
       "name": "Ames",
       "level": 4
     },
     {
-      "name": "BOA",
+      "name": "Codes",
       "level": 4
     },
     {
-      "name": "Codes",
+      "name": "Data",
       "level": 4
     },
     {
@@ -610,6 +618,10 @@
       "level": 4
     },
     {
+      "name": "female",
+      "level": 4
+    },
+    {
       "name": "names",
       "level": 4
     },
@@ -634,15 +646,15 @@
       "level": 4
     },
     {
+      "name": "racer",
+      "level": 4
+    },
+    {
       "name": "recursively",
       "level": 4
     },
     {
       "name": "region",
-      "level": 4
-    },
-    {
-      "name": "scrapes",
       "level": 4
     },
     {
@@ -671,6 +683,10 @@
     },
     {
       "name": "コード",
+      "level": 4
+    },
+    {
+      "name": "データベース",
       "level": 4
     },
     {
@@ -703,6 +719,14 @@
     },
     {
       "name": "天候",
+      "level": 4
+    },
+    {
+      "name": "女子",
+      "level": 4
+    },
+    {
+      "name": "帝国",
       "level": 4
     },
     {
@@ -739,10 +763,6 @@
     },
     {
       "name": "英語",
-      "level": 4
-    },
-    {
-      "name": "選手",
       "level": 4
     },
     {
@@ -811,6 +831,24 @@
     }
   ],
   "activities": [
+    {
+      "date": "2026-10-30",
+      "title": "shimomo/boatrace-motivation-viz",
+      "url": "https://github.com/shimomo/boatrace-motivation-viz/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-29",
+      "title": "shimomo/boatrace-motivation-viz",
+      "url": "https://github.com/shimomo/boatrace-motivation-viz/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-28",
+      "title": "shimomo/boatrace-replay-links",
+      "url": "https://github.com/shimomo/boatrace-replay-links/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
     {
       "date": "2026-10-26",
       "title": "shimomo/boatrace-replay-links",
@@ -1233,8 +1271,8 @@
     }
   ],
   "counts": {
-    "publicRepos": 33,
-    "stars": 40,
+    "publicRepos": 34,
+    "stars": 41,
     "followers": 12
   }
 }
