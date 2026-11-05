@@ -7,15 +7,15 @@
   "location": "Japan",
   "avatar": "avatar.jpg",
   "scores": {
-    "tech": 3.43,
+    "tech": 3.44,
     "business": 3.48,
     "influence": 2.65,
-    "techPercentile": 80.9,
+    "techPercentile": 81.2,
     "breakdown": [
       {
         "key": "github",
-        "score": 3.37,
-        "percentile": 77.6
+        "score": 3.38,
+        "percentile": 78
       },
       {
         "key": "articles",
@@ -135,7 +135,7 @@
       "name": "boatraceopenapi/api",
       "url": "https://github.com/boatraceopenapi/api",
       "language": "PHP",
-      "stars": 5,
+      "stars": 6,
       "description": "A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
     },
     {
@@ -186,6 +186,13 @@
       "language": "Python",
       "stars": 0,
       "description": "競輪の出走表・レース結果を収集し、昇級・降級の影響を補正した競走得点を算出・表示する個人用データ基盤（Python / GitHub Actions / Streamlit）"
+    },
+    {
+      "name": "keirin-platform/keirin-research",
+      "url": "https://github.com/keirin-platform/keirin-research",
+      "language": "Python",
+      "stars": 0,
+      "description": "競輪の検証と予想のための共通認識（知識とスキル）。Claude Code と Codex から読む"
     },
     {
       "name": "shimomo/autorace-news",
@@ -297,7 +304,7 @@
   "languages": [
     {
       "name": "PHP",
-      "bytes": 2325683
+      "bytes": 2334798
     },
     {
       "name": "TypeScript",
@@ -309,7 +316,7 @@
     },
     {
       "name": "JavaScript",
-      "bytes": 152593
+      "bytes": 154154
     },
     {
       "name": "Python",
@@ -317,7 +324,7 @@
     },
     {
       "name": "HTML",
-      "bytes": 68734
+      "bytes": 69047
     },
     {
       "name": "PowerShell",
@@ -836,6 +843,78 @@
   ],
   "activities": [
     {
+      "date": "2026-11-03",
+      "title": "shimomo/boatrace-replay-links",
+      "url": "https://github.com/shimomo/boatrace-replay-links/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "boatracevibeproject/scraper",
+      "url": "https://github.com/boatracevibeproject/scraper/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "boatracevibeproject/converter",
+      "url": "https://github.com/boatracevibeproject/converter/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "boatraceopenapi/results",
+      "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "boatraceopenapi/results",
+      "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "keirin-platform/keirin-research",
+      "url": "https://github.com/keirin-platform/keirin-research/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
       "date": "2026-10-30",
       "title": "shimomo/boatrace-motivation-viz",
       "url": "https://github.com/shimomo/boatrace-motivation-viz/pulls?q=is:pr+author:shimomo",
@@ -1276,7 +1355,7 @@
   ],
   "counts": {
     "publicRepos": 34,
-    "stars": 41,
+    "stars": 42,
     "followers": 12
   }
 }
