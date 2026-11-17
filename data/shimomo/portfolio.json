@@ -10,12 +10,12 @@
     "tech": 3.44,
     "business": 3.48,
     "influence": 2.65,
-    "techPercentile": 81.2,
+    "techPercentile": 81.3,
     "breakdown": [
       {
         "key": "github",
         "score": 3.38,
-        "percentile": 78
+        "percentile": 78.2
       },
       {
         "key": "articles",
@@ -135,7 +135,7 @@
       "name": "boatraceopenapi/api",
       "url": "https://github.com/boatraceopenapi/api",
       "language": "PHP",
-      "stars": 6,
+      "stars": 7,
       "description": "A project for publishing a boatrace API with GitHub Actions and GitHub Pages. / GitHub Actions と GitHub Pages を利用してボートレース（競艇）の API を公開するプロジェクト"
     },
     {
@@ -223,6 +223,41 @@
       "description": "ボートレース（競艇）の買い方を実際のレース結果で検証するバックテストの実験室 / A browser-only backtesting lab for boatrace betting strategies"
     },
     {
+      "name": "shimomo/jmaxml-php",
+      "url": "https://github.com/shimomo/jmaxml-php",
+      "language": "PHP",
+      "stars": 0,
+      "description": "Unofficial PHP libraries for JMA (Japan Meteorological Agency) disaster information XML / 気象庁防災情報XMLの非公式 PHP ライブラリ"
+    },
+    {
+      "name": "shimomo/jmaxml-php-codes",
+      "url": "https://github.com/shimomo/jmaxml-php-codes",
+      "language": "PHP",
+      "stars": 0,
+      "description": "Read-only split of shimomo/jmaxml-php (jmaxml/codes)"
+    },
+    {
+      "name": "shimomo/jmaxml-php-core",
+      "url": "https://github.com/shimomo/jmaxml-php-core",
+      "language": "PHP",
+      "stars": 0,
+      "description": "Read-only split of shimomo/jmaxml-php (jmaxml/core)"
+    },
+    {
+      "name": "shimomo/jmaxml-php-earthquake",
+      "url": "https://github.com/shimomo/jmaxml-php-earthquake",
+      "language": "PHP",
+      "stars": 0,
+      "description": "Read-only split of shimomo/jmaxml-php (jmaxml/earthquake)"
+    },
+    {
+      "name": "shimomo/jmaxml-php-feed",
+      "url": "https://github.com/shimomo/jmaxml-php-feed",
+      "language": "PHP",
+      "stars": 0,
+      "description": "Read-only split of shimomo/jmaxml-php (jmaxml/feed)"
+    },
+    {
       "name": "shimomo/keirin-news",
       "url": "https://github.com/shimomo/keirin-news",
       "language": "PHP",
@@ -272,6 +307,13 @@
       "description": "Presets for QuadView"
     },
     {
+      "name": "shimomo/re-buji",
+      "url": "https://github.com/shimomo/re-buji",
+      "language": "PHP",
+      "stars": 0,
+      "description": "Re:Buji (Re:無事) is a self-hosted earthquake safety-confirmation app: staff reply to an email to report that they are safe. Unofficial; uses JMA disaster information XML."
+    },
+    {
       "name": "shimomo/ses-filter",
       "url": "https://github.com/shimomo/ses-filter",
       "language": "TypeScript",
@@ -304,7 +346,7 @@
   "languages": [
     {
       "name": "PHP",
-      "bytes": 2334798
+      "bytes": 5973127
     },
     {
       "name": "TypeScript",
@@ -323,16 +365,16 @@
       "bytes": 78341
     },
     {
+      "name": "Shell",
+      "bytes": 74316
+    },
+    {
       "name": "HTML",
       "bytes": 69047
     },
     {
       "name": "PowerShell",
       "bytes": 50844
-    },
-    {
-      "name": "Shell",
-      "bytes": 42353
     },
     {
       "name": "Ruby",
@@ -842,6 +884,108 @@
     }
   ],
   "activities": [
+    {
+      "date": "2026-11-12",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-12",
+      "title": "keirin-platform/keirin-research",
+      "url": "https://github.com/keirin-platform/keirin-research/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-08",
+      "title": "shimomo/re-buji",
+      "url": "https://github.com/shimomo/re-buji/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-07",
+      "title": "keirin-platform/keirin-platform",
+      "url": "https://github.com/keirin-platform/keirin-platform/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-06",
+      "title": "shimomo/re-buji",
+      "url": "https://github.com/shimomo/re-buji/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "boatraceopenapi/results",
+      "url": "https://github.com/boatraceopenapi/results/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "boatraceopenapi/previews",
+      "url": "https://github.com/boatraceopenapi/previews/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "boatraceopenapi/programs",
+      "url": "https://github.com/boatraceopenapi/programs/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "shimomo/re-buji",
+      "url": "https://github.com/shimomo/re-buji/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "shimomo/re-buji",
+      "url": "https://github.com/shimomo/re-buji",
+      "type": "github"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "shimomo/jmaxml-php",
+      "url": "https://github.com/shimomo/jmaxml-php/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "shimomo/jmaxml-php-earthquake",
+      "url": "https://github.com/shimomo/jmaxml-php-earthquake",
+      "type": "github"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "shimomo/jmaxml-php-feed",
+      "url": "https://github.com/shimomo/jmaxml-php-feed",
+      "type": "github"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "shimomo/jmaxml-php-codes",
+      "url": "https://github.com/shimomo/jmaxml-php-codes",
+      "type": "github"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "shimomo/jmaxml-php-core",
+      "url": "https://github.com/shimomo/jmaxml-php-core",
+      "type": "github"
+    },
+    {
+      "date": "2026-11-04",
+      "title": "shimomo/jmaxml-php",
+      "url": "https://github.com/shimomo/jmaxml-php/pulls?q=is:pr+author:shimomo",
+      "type": "github_pr"
+    },
+    {
+      "date": "2026-11-04",
+      "title": "shimomo/jmaxml-php",
+      "url": "https://github.com/shimomo/jmaxml-php",
+      "type": "github"
+    },
     {
       "date": "2026-11-03",
       "title": "shimomo/boatrace-replay-links",
@@ -1354,8 +1498,8 @@
     }
   ],
   "counts": {
-    "publicRepos": 34,
-    "stars": 42,
+    "publicRepos": 40,
+    "stars": 43,
     "followers": 12
   }
 }
